@@ -1,0 +1,34 @@
+sudo: required
+
+dist: trusty
+
+language: node_js
+
+branches:
+  # This is where pull requests from "bors r+" are built.
+  - staging
+  # This is where pull requests from "bors try" are built.
+  - trying
+
+node_js:
+  - "6"
+
+addons:
+  chrome: stable
+
+env:
+  - EMBER_VERSION=release
+
+matrix:
+  fast_finish: true
+
+before_install:
+  - "npm config set spin false"
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost:7357 &
+
+install:
+  - cd $(./.ci_helper.sh name)
+  - npm install
+
+script:
+  - ember test
