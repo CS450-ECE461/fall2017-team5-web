@@ -1,7 +1,8 @@
 <h1 align="center">Sojo-App</h1>
 
 <p align="center">
-<img src="https://travis-ci.org/CS450-ECE461/fall2017-team5-web.svg?branch=staging" />
+<a href="https://travis-ci.org/CS450-ECE461/fall2017-team5-web">
+<img src="https://travis-ci.org/CS450-ECE461/fall2017-team5-web.svg?branch=staging" /></a>
 </p>
 
 # Downloading  the project
