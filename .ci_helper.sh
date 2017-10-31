@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Configuration Variables
-PROGRAM_NAME=homely-app
+PROGRAM_NAME=sojo-app
 
 if [ -z "$1" ] ; then
   exit 0
