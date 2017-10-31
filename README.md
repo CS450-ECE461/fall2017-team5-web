@@ -14,7 +14,7 @@ $ git clone git@github.com:CS450-ECE461/fall2017-team5-web.git
 ```sh
 $ git clone https://github.com/CS450-ECE461/fall2017-team5-web.git
 ```
-# [Workflow Standards](https://github.com/CS450-ECE461/fall2017-team5-web/blob/master/WORKFLOW.md)
-# [Development Dependencies](https://github.com/CS450-ECE461/fall2017-team5-web/blob/master/DEVELOPMENT_DEPS.md)
-# [Testing](https://github.com/CS450-ECE461/fall2017-team5-web/blob/master/TESTING.md)
+# [Workflow Standards](https://github.com/CS450-ECE461/fall2017-team5-web/blob/master/docs/WORKFLOW.md)
+# [Development Dependencies](https://github.com/CS450-ECE461/fall2017-team5-web/blob/master/docs/DEVELOPMENT_DEPS.md)
+# [Testing](https://github.com/CS450-ECE461/fall2017-team5-web/blob/master/docs/TESTING.md)
 
