@@ -1,8 +1,8 @@
 {
-  "name": "homely-app",
+  "name": "sojo-app",
   "version": "0.0.0",
   "private": true,
-  "description": "Small description for homely-app goes here",
+  "description": "Small description for sojo-app goes here",
   "license": "MIT",
   "author": "",
   "directories": {

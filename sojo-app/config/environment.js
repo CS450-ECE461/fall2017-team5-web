@@ -3,7 +3,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'homely-app',
+    modulePrefix: 'sojo-app',
     environment,
     rootURL: '/',
     locationType: 'auto',
