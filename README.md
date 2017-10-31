@@ -1,1 +1,1 @@
-<h1 align="center">Homely-App</h1>
+<h1 align="center">Sojo-App</h1>
