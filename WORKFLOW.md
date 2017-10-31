@@ -1,4 +1,5 @@
-# Workflow Standards
+<h1 align="center">Workflow Standards</h1>
+
 There are many standard practices involving git and github when collaborating on a group project.  The standards defined below are **mandatory**, and everyone working on the project is **required** to adhere to them.
 
 ## Git Standards
