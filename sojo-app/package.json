@@ -27,6 +27,7 @@
     "ember-cli-eslint": "^4.0.0",
     "ember-cli-gatekeeper": "^0.24.0",
     "ember-cli-google": "^0.4.2",
+    "ember-cli-google-recaptcha": "^1.0.0",
     "ember-cli-htmlbars": "^2.0.1",
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "^1.4.1",

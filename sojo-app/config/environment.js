@@ -30,6 +30,12 @@ module.exports = function(environment) {
         signInRoute: 'login'
     },
 
+    'ember-cli-google': {
+      recaptcha: {
+        siteKey: '6LcabzgUAAAAADSaS2ZfT7RNORE-YoRXR4g90dTb'
+      }
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
