@@ -1,10 +1,38 @@
-<h1 style="text-align: center; margin-top: 130px;">Sojo</h1>
-<br><br><br><br><br><br>
+
+<svg id="logo" width="280px" height="246px" viewBox="0 0 280 246" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <defs>
+        <polygon id="path-1" points="0 0.9686 0 79.8836 65.8928055 79.8836 65.8928055 0.9686"></polygon>
+    </defs>
+    <g id="Updated-Designs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Login-Screen-2" transform="translate(-40.000000, -50.000000)">
+            <g id="Page" transform="translate(32.000000, 58.000000)">
+                <g id="Logo" transform="translate(8.000000, 0.000000)">
+                    <polyline id="Stroke-1" stroke="#1AA5B8" stroke-width="16" points="113.1541 141.5895 113.1541 229.3405 177.5051 229.3405 177.5051 0.0005 241.8541 0.0005 241.8541 79.1895"></polyline>
+                    <g id="Group-5" transform="translate(0.000000, 69.340000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-4"></g>
+                        <path d="M53.6199,21.2646 C47.7149,15.8116 41.3539,14.2976 33.9309,14.2976 C24.3879,14.1446 18.0269,17.3266 18.0269,23.2336 C18.1779,29.4436 24.6879,31.8686 34.2319,32.7756 C48.0159,33.9886 66.0399,37.0176 65.8919,56.2536 C65.7389,70.1896 53.4699,79.8836 34.0819,79.8836 C21.9659,79.8836 9.8479,77.1576 -0.0001,66.0996 L8.1799,55.0436 C15.1479,62.7676 25.5989,65.9486 34.3859,66.0996 C41.8069,66.0996 50.1369,63.3726 50.2899,56.4056 C50.4399,49.7416 44.0769,47.1666 33.0209,46.1046 C18.9359,44.7426 2.7249,40.1976 2.5779,23.6886 C2.5779,7.1776 19.6919,0.9686 33.6269,0.9686 C45.1399,0.9686 54.0749,3.5426 62.4079,10.9646 L53.6199,21.2646 Z" id="Fill-3" fill="#002C3F" mask="url(#mask-2)"></path>
+                    </g>
+                    <path d="M92.3973,109.69 C92.3973,123.019 101.0313,133.925 115.2693,133.925 C129.6563,133.925 138.2903,123.019 138.2903,109.69 C138.2903,96.511 128.9003,85.152 115.2693,85.152 C101.0313,85.152 92.3973,96.511 92.3973,109.69 M154.0453,109.69 C154.0453,131.805 138.7453,148.466 115.2693,148.466 C91.9423,148.466 76.7943,131.805 76.7943,109.69 C76.7943,87.727 92.0923,70.761 115.2693,70.761 C138.2903,70.761 154.0453,87.727 154.0453,109.69" id="Fill-6" fill="#002C3F"></path>
+                    <path d="M185.1551,71.9733 L185.1551,155.7363 C185.1551,174.5193 178.3401,184.3653 161.5271,184.3653 C156.2231,184.3653 150.9241,183.0013 145.7701,179.6693 L151.3751,167.4003 C154.5581,168.9143 157.8891,169.8243 160.9191,169.6723 C168.3421,169.5203 169.5521,164.3703 169.5521,155.7363 L169.5521,71.9733 L185.1551,71.9733 Z" id="Fill-8" fill="#002C3F"></path>
+                    <path d="M218.2645,109.69 C218.2645,123.019 226.8985,133.925 241.1375,133.925 C255.5265,133.925 264.1605,123.019 264.1605,109.69 C264.1605,96.511 254.7675,85.152 241.1375,85.152 C226.8985,85.152 218.2645,96.511 218.2645,109.69 M279.9135,109.69 C279.9135,131.805 264.6155,148.466 241.1375,148.466 C217.8105,148.466 202.6615,131.805 202.6615,109.69 C202.6615,87.727 217.9635,70.761 241.1375,70.761 C264.1605,70.761 279.9135,87.727 279.9135,109.69" id="Fill-10" fill="#002C3F"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+<br><br>
 <div class="login-form">
-{{gatekeeper-sign-in-vertical signInComplete=(action "signInComplete")}}
+{{gatekeeper-sign-in-vertical signInComplete=(action "signInComplete") signInButtonColor="#ed503a"}}
 <br>
-{{#link-to "register"}}{{#mdl-button isRaised=true isAccent=true}}Register{{/mdl-button}}{{/link-to}}
+{{#link-to "register"}}{{#mdl-button isRaised=true isAccent=true id="register"}}Register{{/mdl-button}}{{/link-to}}
 <br/><br/>
-<input type="checkbox"> Remember Me <a class="forgot-password" href="#">Forgot Password</a>
+{{#mdl-switch value=rememberMe label="Remember Me"}}
+  Remember Me
+{{/mdl-switch}}
+ <a class="forgot-password" href="#">Forgot Password</a>
 
 </div>
