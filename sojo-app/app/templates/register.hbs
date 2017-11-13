@@ -1,8 +1,35 @@
-Name:
-{{input name='name'}}<br>
-Email:
-{{input name='email'}}<br>
-Password:
-{{input name='password'}}<br>
-Confirm Password:
-{{input name='confirmPassword'}}<br>
+<div style="margin-left: auto; margin-right: auto; display: block; width: 300px;">
+{{#if errorMessage}}
+  {{errorMessage}}
+{{/if}}
+<h2>Registration</h2>
+<form {{action "createAccount" on="submit"}}>
+  {{mdl-textfield type="email"
+                  value=email
+                  placeholder="Enter your email"
+                  required=true
+                  autocapitalize="none"
+                  label="Email"}}
+  <br/>
+  {{mdl-textfield type="text"
+                  value=username
+                  placeholder="Enter your username"
+                  required=true
+                  autocapitalize="none"
+                  label="Username"}}
+  <br/>
+  {{mdl-textfield type="password"
+                  value=password
+                  placeholder="Enter your password"
+                  required=true
+                  autocapitalize="none"
+                  label="Username"}}
+  <br/>
+  {{#mdl-button type="submit"
+                colored=true
+                disabled=isSigningIn}}
+    Register
+  {{/mdl-button}}<br/><br/>
+  {{#link-to "login"}} Go back to login {{/link-to}}
+</form>
+</div>

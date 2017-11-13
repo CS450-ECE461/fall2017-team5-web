@@ -3,6 +3,8 @@
 <div class="login-form">
 {{gatekeeper-sign-in-vertical signInComplete=(action "signInComplete")}}
 <br>
+{{#link-to "register"}}{{#mdl-button isRaised=true isAccent=true}}Register{{/mdl-button}}{{/link-to}}
+<br/><br/>
 <input type="checkbox"> Remember Me <a class="forgot-password" href="#">Forgot Password</a>
-{{#link-to "register"}}Create an account{{/link-to}}
+
 </div>
