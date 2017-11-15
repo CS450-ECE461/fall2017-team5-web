@@ -1,0 +1,49 @@
+@import "app-colors";
+@import "routes";
+
+@import "_color-definitions";
+
+$color-primary: #ed503a;
+$color-accent: #1ba5b7;
+
+@import "material-design-lite";
+
+body.mdl-route__login{
+
+background-color: #FAFAFA;
+.login-form{
+    width:80%; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+
+    .mdl-button{
+        width: 100%;
+        background-color: $color-primary;
+    }
+
+
+}
+
+#register{
+    background-color: $color-accent;
+    color: white;
+}
+
+.forgot-password{
+    text-align: right;
+    float: right;
+    text-decoration: none;
+    position: relative;
+    top: -25px;
+}
+
+#logo{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-top: 30px;
+    width: 200px;
+}
+
+}
