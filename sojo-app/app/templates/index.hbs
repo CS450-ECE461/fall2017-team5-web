@@ -1,5 +1,14 @@
-<h3>Welcome to Sojo</h3>
-{{log isSignedIn}}
-<h5>Hello, {{model.username}}</h5>
-<button {{action "signOut"}}>Sign Out</button>
-{{outlet}}
+{{#mdl-layout fixedHeader=true}}
+  {{#mdl-layout-header}}
+    {{mdl-toolbar title="Dashboard"}}
+  {{/mdl-layout-header}}
+
+  {{#mdl-layout-content}}
+    <h3>Welcome to Sojo</h3>
+    {{log isSignedIn}}
+    <h5>Hello, {{model.username}}</h5>
+    <button {{action "signOut"}}>Sign Out</button>
+    {{outlet}}
+   {{/mdl-layout-content}}
+{{/mdl-layout}}
+
