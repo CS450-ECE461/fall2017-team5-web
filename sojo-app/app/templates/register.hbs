@@ -1,9 +1,14 @@
-<div style="margin-left: auto; margin-right: auto; display: block; width: 300px;">
-{{#if errorMessage}}
+{{#mdl-layout fixedHeader=true}}
+  {{#mdl-layout-header}}
+    {{mdl-toolbar title="User Registration" navigateUpTo="login"}}
+  {{/mdl-layout-header}}
+
+  {{#mdl-layout-content}}
+  {{#if errorMessage}}
   {{errorMessage}}
-{{/if}}
-<h2>Registration</h2>
-<form {{action "createAccount" on="submit"}}>
+  {{/if}}
+  <br><br>
+    <form {{action "createAccount" on="submit"}}>
   {{mdl-textfield type="email"
                   value=email
                   placeholder="Enter your email"
@@ -24,12 +29,16 @@
                   required=true
                   autocapitalize="none"
                   label="Password"}}
-  <br/>
+  <br/><br>
+  <br>
+  <br>
   {{#mdl-button type="submit"
                 colored=true
                 disabled=isSigningIn}}
     Register
-  {{/mdl-button}}<br/><br/>
-  {{#link-to "login"}} Go back to login {{/link-to}}
-</form>
-</div>
+  {{/mdl-button}}
+  </form>
+    {{outlet}}
+   {{/mdl-layout-content}}
+{{/mdl-layout}}
+
