@@ -6,7 +6,6 @@
 $color-secondary: "253,190,14";
 
 body.mdl-route__login{
-
 #sojo-logo{
     width: 212px;
     height: 212px;
@@ -17,9 +16,9 @@ body.mdl-route__login{
 }
 
 .login-form{
-    width:80%; 
-    display: block; 
-    margin-left: auto; 
+    width:80%;
+    display: block;
+    margin-left: auto;
     margin-right: auto;
 
     #register.mdl-button{
@@ -72,7 +71,7 @@ body.mdl-route__login{
         text-decoration: none;
         a{
             text-decoration: none;
-            color: #BDBDBD;            
+            color: #BDBDBD;
         }
         svg{
             display: block;
@@ -95,3 +94,29 @@ a{
     top: 16px;
     color: #C5E8ED;
 }
+
+.buttons-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 25px;
+
+  .service-button{
+    margin: 20px 0 20px 0;
+    text-align: center;
+    flex: 1;
+    font-size: 14px;
+    color: #9E9E9E;
+    letter-spacing: 0;
+    button{
+      margin-bottom: 30px!important;
+    }
+  }
+  .large-button-round > button {
+    width: 80px;
+    height: 80px;
+
+  }
+  }
+
+
