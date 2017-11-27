@@ -4,11 +4,20 @@
 <div class="login-form">
 {{gatekeeper-sign-in-vertical signInComplete=(action "signInComplete") signInButtonColor="#ed503a"}}
 <br>
-{{#link-to "register"}}{{#mdl-button isRaised=true isAccent=true id="register"}}Register{{/mdl-button}}{{/link-to}}
+
+{{#link-to "register"}}
+	{{#mdl-button isRaised=true isAccent=true id="register"}}
+		Register
+	{{/mdl-button}}
+{{/link-to}}
 <br/><br/>
+
 {{#mdl-switch value=rememberMe label="Remember Me"}}
   Remember Me
 {{/mdl-switch}}
- <a class="forgot-password" href="#">Forgot Password</a>
+<br/><br/>
+{{#link-to "forgot-password"}}
+	Forgot Password
+{{/link-to}}
 
 </div>
