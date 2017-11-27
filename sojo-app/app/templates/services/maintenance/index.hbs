@@ -1,0 +1,18 @@
+{{#mdl-layout fixedHeader=true}}
+  {{#mdl-layout-header}}
+    {{mdl-toolbar title="Maintenance" navigateUpTo="services"}}
+  {{/mdl-layout-header}}
+
+  {{#mdl-layout-content}}
+    {{#link-to "services.maintenance.send" (query-params type="Plumbing")}}Plumbing{{/link-to}}<br>
+    {{#link-to "services.maintenance.send" (query-params type="Alarms/Detectors")}}Alarms/Detectors{{/link-to}}<br>
+    {{#link-to "services.maintenance.send" (query-params type="Lock Outs")}}Lock Outs{{/link-to}}<br>
+    {{#link-to "services.maintenance.send" (query-params type="Pests")}}Pests{{/link-to}}<br>
+    {{#link-to "services.maintenance.send" (query-params type="Emergency")}}Emergency{{/link-to}}<br>
+    {{#link-to "services.maintenance.send" (query-params type="Heating/Cooling")}}Heating/Cooling{{/link-to}}<br>
+    {{#link-to "services.maintenance.send" (query-params type="Applicances")}}Appliances{{/link-to}}<br>
+    {{#link-to "services.maintenance.send" (query-params type="Electricity")}}Electricity{{/link-to}}<br>
+    {{#link-to "services.maintenance.send" (query-params type="Other")}}Other{{/link-to}}
+  {{/mdl-layout-content}}
+{{/mdl-layout}}
+

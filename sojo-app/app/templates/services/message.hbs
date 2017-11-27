@@ -1,0 +1,23 @@
+{{#mdl-layout fixedHeader=true}}
+  {{#mdl-layout-header}}
+    {{mdl-toolbar title="Message Landlord" navigateUpTo="services"}}
+  {{/mdl-layout-header}}
+
+  {{#mdl-layout-content}}
+    (Message your landlord icon)
+    <br><br><br>
+    {{mdl-textarea label="Message your Landlord"
+                    required=true
+                    fullWidth=true
+                    customError=customError
+                    placeholder="Type your message here..."
+                    errorMessage=errorMessage
+                    rows=5
+                    floatingLabel=true
+                    tooltip="Text field"}}
+
+    {{#mdl-button type="raised" click=(action (mut errorMessage) "This is a custom error message")}}Submit{{/mdl-button}}
+
+  {{/mdl-layout-content}}
+{{/mdl-layout}}
+
