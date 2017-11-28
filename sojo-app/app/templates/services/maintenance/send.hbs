@@ -4,10 +4,11 @@
   {{/mdl-layout-header}}
 
   {{#mdl-layout-content}}
-    Send {{type}} maintenance request here
-
-    <br><br><br>
-    {{mdl-textarea label="Maintenance Request"
+    <div class="priority-switch">
+    {{mdl-switch label="High Priority" colored=true}}
+    </div>
+    <br>
+    {{mdl-textarea label="Please write a short description"
                    required=true
                    fullWidth=true
                    customError=customError
@@ -15,9 +16,22 @@
                    errorMessage=errorMessage
                    rows=5
                    floatingLabel=true
-                   tooltip="Text field"}}
+                   expandable=true
+                   id="landlord-message"
+                   maxlength=300
+                   key-down=(action "updateMessageCount")
+    }}
+    <div class="landlord-message-count message-count">{{messageCount}} / 300</div>
+    <input type="file" id="file" accept="image/*">
+    <label for="file" class="file-upload-label">
+      <div class="mdl-button mdl-js-button mdl-button--fab mdl-button--primary add-maintenance-photo">
+      <i class="material-icons add-photo-icon">+</i>
+      </div> Add Photos
+    </label>
 
-    {{#mdl-button type="raised" click=(action (mut errorMessage) "This is a custom error message")}}Submit{{/mdl-button}}
+
+
+    {{#mdl-button type="raised" colored=true click=(action (mut errorMessage) "Need to implement output") id="request-submit-button"}}Submit{{/mdl-button}}
   {{/mdl-layout-content}}
 {{/mdl-layout}}
 

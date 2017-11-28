@@ -5,6 +5,11 @@
 
 $color-secondary: "253,190,14";
 
+body{
+  font-family: "Roboto";
+  color: #9E9E9E;
+}
+
 body.mdl-route__login{
 #sojo-logo{
     width: 212px;
@@ -112,11 +117,81 @@ a{
       margin-bottom: 30px!important;
     }
   }
-  .large-button-round > button {
+  .service-button-large > button {
     width: 80px;
     height: 80px;
-
   }
+  .maintenance-request-button > button,
+  .message-landlord-button > button{
+    width: 140px;
+    height: 140px;
+    margin-bottom: 16px!important;
+    box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, .24);
+  }
+}
+
+.service-selection-container{
+  flex-direction: column;
+  .button-container{
+    margin: 36px;
+  }
+}
+
+.mdl-route__services{
+  #message-landlord-icon{
+    display: block;
+    margin-left: auto;
+    margin-top: 63px;
+    margin-right: auto;
   }
 
+  .mdl-textfield{
+    width: 90%;
+    display: block;
+    margin-left: 20px;
+  }
 
+  .mdl-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .message-count{
+    text-align: right;
+    margin-right: 20px;
+  }
+  .priority-switch{
+    margin-top: 40px;
+    margin-left:19px;
+    margin-bottom: 28px;
+  }
+}
+.mdl-button--file {
+  input {
+    cursor: pointer;
+    height: 100%;
+    right: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 300px;
+    z-index: 4;
+  }
+}
+
+#file { display: none }
+
+.add-maintenance-photo{
+  margin-left: 10px!important;
+  margin-right: 20px!important;
+  display: inline-block!important;
+  .add-photo-icon{
+    font-size: 30px;
+    /* position: relative; */
+    /* left: 0; */
+    top: 38%;
+  }
+}
+#request-submit-button{
+  margin-top: 40px;
+}
