@@ -5,8 +5,27 @@
 
 $color-secondary: "253,190,14";
 
-body.mdl-route__login{
+body{
+  font-family: "Roboto";
+  color: #9E9E9E;
+}
 
+.mdl-switch__thumb{
+  background-color: #BDBDBD!important;
+}
+.mdl-switch__track{
+  background-color: rgba(0,0,0,.1)!important;
+}
+.mdl-switch.is-checked{
+  .mdl-switch__thumb {
+    background: rgb(253,190,14)!important;
+  }
+  .mdl-switch__track {
+    background: rgba(253,190,14,.2)!important;
+  }
+}
+
+body.mdl-route__login{
 #sojo-logo{
     width: 212px;
     height: 212px;
@@ -16,10 +35,11 @@ body.mdl-route__login{
     margin-top: 40px;
 }
 
+
 .login-form{
-    width:80%; 
-    display: block; 
-    margin-left: auto; 
+    width:80%;
+    display: block;
+    margin-left: auto;
     margin-right: auto;
 
     #register.mdl-button{
@@ -72,7 +92,7 @@ body.mdl-route__login{
         text-decoration: none;
         a{
             text-decoration: none;
-            color: #BDBDBD;            
+            color: #BDBDBD;
         }
         svg{
             display: block;
@@ -94,4 +114,225 @@ a{
     left: 16px;
     top: 16px;
     color: #C5E8ED;
+}
+
+.buttons-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 25px;
+
+  .service-button{
+    margin: 20px 0 20px 0;
+    text-align: center;
+    flex: 1;
+    font-size: 14px;
+    color: #9E9E9E;
+    letter-spacing: 0;
+    button{
+      margin-bottom: 30px!important;
+    }
+  }
+  .service-button-large > button {
+    width: 80px;
+    height: 80px;
+  }
+  .maintenance-request-button > button,
+  .message-landlord-button > button{
+    width: 140px;
+    height: 140px;
+    margin-bottom: 16px!important;
+    box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, .24);
+  }
+}
+
+.service-selection-container{
+  flex-direction: column;
+  .button-container{
+    margin: 36px;
+  }
+}
+
+.mdl-route__services{
+  #message-landlord-icon{
+    display: block;
+    margin-left: auto;
+    margin-top: 63px;
+    margin-right: auto;
+  }
+
+  .mdl-textfield{
+    width: 90%;
+    display: block;
+    margin-left: 20px;
+  }
+
+  .mdl-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .message-count{
+    text-align: right;
+    margin-right: 20px;
+  }
+  .priority-switch{
+    margin-top: 40px;
+    margin-left:19px;
+    margin-bottom: 28px;
+  }
+}
+.mdl-button--file {
+  input {
+    cursor: pointer;
+    height: 100%;
+    right: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 300px;
+    z-index: 4;
+  }
+}
+
+#file { display: none }
+
+.add-maintenance-photo{
+  margin-left: 10px!important;
+  margin-right: 20px!important;
+  display: inline-block!important;
+  .add-photo-icon{
+    font-size: 30px;
+    /* position: relative; */
+    /* left: 0; */
+    top: 38%;
+  }
+}
+#request-submit-button{
+  margin-top: 40px;
+}
+
+.mdl-route__account{
+  .account-header{
+    width: 100%;
+    background: rgba(26,165,184,1);
+    color: white;
+    .account-full-name{
+      text-align: center;
+      width: 100%;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 20px 0 0 0;
+    }
+    .account-profile-img{
+      height: 160px;
+      width: 160px;
+      display: block;
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.55);
+      margin: 10px auto;
+    }
+    .account-resident-since{
+      display: block;
+      margin-bottom: 5px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .account-lease-type{
+      display: block;
+      padding-bottom: 20px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .mdl-tabs__tab-bar{
+    background-color: rgba(26,165,184,.4);
+    font-size: 14px;
+  }
+  .mdl-tabs__tab.is-active{
+    color: #1AA5B8!important;
+    font-weight: bold;
+  }
+  .mdl-tabs__tab {
+    color: white!important;
+    font-weight: 300;
+
+  }
+
+  .account-info-header {
+    color: #1AA5B8;
+    font-weight: bold;
+    font-size: 16px;
+    //margin: 8px 0 8px 0;
+    position: relative;
+    right:  30px;
+    i{
+      position: relative;
+      top: 5px;
+      right: 5px;
+    }
+  }
+  .contact-information{
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
+    width: 300px;
+    padding-left: 100px;
+    padding-right: 65px;
+    line-height: 2;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  .complex-information{
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
+    width: 300px;
+    padding-left: 100px;
+    padding-right: 65px;
+    line-height: 2;
+  }
+  .account-lease-tab{
+    .buttons-container{
+      flex-direction: column;
+      margin-bottom: 0;
+      .button-container{
+        margin: 2px;
+        button{
+          background-color: #E4F0F5;
+          color: #1AA5B8;
+          width: 192px;
+        }
+      }
+    }
+  }
+  .account-settings-tab{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    .settings-header{
+      font-family: Roboto;
+      font-weight: 500;
+      font-size: 16px;
+      color: #1AA5B8;
+      letter-spacing: 0;
+      margin: 12px 16px;
+    }
+    .notification-switch{
+      margin-left: auto;
+      margin-right: auto;
+      width: 150px;
+      font-weight: 300;
+      margin-bottom: 8px;
+
+    }
+
+
+  }
+}
+
+.img-circle {
+  border-radius: 50%;
 }

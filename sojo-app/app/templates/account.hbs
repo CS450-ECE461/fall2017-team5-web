@@ -1,11 +1,28 @@
-{{#mdl-layout fixedHeader=true}}
-  {{#mdl-layout-header}}
-    {{mdl-toolbar title="Account" navigateUpTo="index"}}
-  {{/mdl-layout-header}}
 
-  {{#mdl-layout-content}}
-    <h3>Account</h3>
+{{#mdl-layout fixedHeader=true}}
+  {{account-header full-name=model.profile.full_name start-date=model.lease.start_date_string avatar-url=model.profile.avatar_url}}
+    <div>
+    {{#mdl-tabs rippleEffect=true activeTab=2 }}
+      {{#mdl-tabs-tab-bar colored=true}}
+        {{#mdl-tabs-tab}}Profile{{/mdl-tabs-tab}}
+        {{#mdl-tabs-tab}}Lease{{/mdl-tabs-tab}}
+        {{#mdl-tabs-tab}}Settings{{/mdl-tabs-tab}}
+      {{/mdl-tabs-tab-bar}}
+
+      {{#mdl-tabs-panel}}
+        {{profile-tab email=model.account.email phone=model.profile.phone address=model.unit.apt_complex_address unit=model.unit.unit_index building=model.unit.building_index}}
+      {{/mdl-tabs-panel}}
+
+      {{#mdl-tabs-panel}}
+        {{lease-tab}}
+      {{/mdl-tabs-panel}}
+
+      {{#mdl-tabs-panel}}
+        {{settings-tab}}
+      {{/mdl-tabs-panel}}
+
+    {{/mdl-tabs}}
+    </div>
     {{outlet}}
-   {{/mdl-layout-content}}
 {{/mdl-layout}}
 
