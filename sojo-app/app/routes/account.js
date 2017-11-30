@@ -5,8 +5,10 @@ export default Gatekeeper.User.AuthenticatedRoute.extend({
         let currentUser = this.get ('currentUser');
         console.log('id is' + currentUser.get('id'));
         var model = {
-          currentUser: currentUser,
-          profile: this.get('store').findRecord('profile', currentUser.get('id'))
+          account: currentUser,
+          profile: this.get('store').findRecord('profile', currentUser.get('id')),
+          lease: this.get('store').findRecord('lease', currentUser.get('id')),
+          unit: this.get('store').findRecord('unit', currentUser.get('id'))
         }
         return model;
     }

@@ -5,7 +5,7 @@ export default DS.JSONAPISerializer.extend({
     payload = {
       data: {
         id: payload.account_id,
-        type: 'profile',
+        type: 'unit',
         attributes: payload
       }
     };

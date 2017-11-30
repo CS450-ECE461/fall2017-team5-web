@@ -1,29 +1,18 @@
 {{#mdl-layout fixedHeader=true}}
-  {{#mdl-layout-header}}
-    {{mdl-toolbar title="Account" navigateUpTo="index"}}
-  {{/mdl-layout-header}}
-
-    <div style="width: 100%; height: 300px; background: rgba(26,165,184,.2)">
-      Name
-    </div>
+    {{account-header full-name=model.profile.full_name}}
+    <div>
     {{#mdl-tabs rippleEffect=true activeTab=2 }}
       {{#mdl-tabs-tab-bar colored=true}}
         {{#mdl-tabs-tab}}Profile{{/mdl-tabs-tab}}
         {{#mdl-tabs-tab}}Lease{{/mdl-tabs-tab}}
         {{#mdl-tabs-tab}}Settings{{/mdl-tabs-tab}}
-        {{#mdl-tabs-tab}}Badges{{/mdl-tabs-tab}}
       {{/mdl-tabs-tab-bar}}
 
       {{#mdl-tabs-panel}}
-        <ul>
-          <li>Profile</li>
-          <li>Catelyn</li>
-          <li>Robb</li>
-          <li>Sansa</li>
-          <li>Brandon</li>
-          <li>Arya</li>
-          <li>Rickon</li>
-        </ul>
+      {{model.account.email}}<br/>
+      {{model.profile.phone}}
+        <br>
+        <br>
       {{/mdl-tabs-panel}}
 
       {{#mdl-tabs-panel}}
@@ -33,10 +22,9 @@
       {{#mdl-tabs-panel}}
         Setting toggles
       {{/mdl-tabs-panel}}
-      {{#mdl-tabs-panel}}
-        Badges
-      {{/mdl-tabs-panel}}
+
     {{/mdl-tabs}}
+    </div>
     {{outlet}}
 {{/mdl-layout}}
 
