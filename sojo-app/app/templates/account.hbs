@@ -1,5 +1,6 @@
+
 {{#mdl-layout fixedHeader=true}}
-    {{account-header full-name=model.profile.full_name}}
+  {{account-header full-name=model.profile.full_name start-date=model.lease.start_date_string avatar-url=model.profile.avatar_url}}
     <div>
     {{#mdl-tabs rippleEffect=true activeTab=2 }}
       {{#mdl-tabs-tab-bar colored=true}}
@@ -9,18 +10,15 @@
       {{/mdl-tabs-tab-bar}}
 
       {{#mdl-tabs-panel}}
-      {{model.account.email}}<br/>
-      {{model.profile.phone}}
-        <br>
-        <br>
+        {{profile-tab email=model.account.email phone=model.profile.phone address=model.unit.apt_complex_address unit=model.unit.unit_index building=model.unit.building_index}}
       {{/mdl-tabs-panel}}
 
       {{#mdl-tabs-panel}}
-       Lease buttons
+        {{lease-tab}}
       {{/mdl-tabs-panel}}
 
       {{#mdl-tabs-panel}}
-        Setting toggles
+        {{settings-tab}}
       {{/mdl-tabs-panel}}
 
     {{/mdl-tabs}}

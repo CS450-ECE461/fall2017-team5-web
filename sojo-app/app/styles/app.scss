@@ -10,6 +10,21 @@ body{
   color: #9E9E9E;
 }
 
+.mdl-switch__thumb{
+  background-color: #BDBDBD!important;
+}
+.mdl-switch__track{
+  background-color: rgba(0,0,0,.1)!important;
+}
+.mdl-switch.is-checked{
+  .mdl-switch__thumb {
+    background: rgb(253,190,14)!important;
+  }
+  .mdl-switch__track {
+    background: rgba(253,190,14,.2)!important;
+  }
+}
+
 body.mdl-route__login{
 #sojo-logo{
     width: 212px;
@@ -19,6 +34,7 @@ body.mdl-route__login{
     margin-right: auto;
     margin-top: 40px;
 }
+
 
 .login-form{
     width:80%;
@@ -206,14 +222,14 @@ a{
       width: 100%;
       font-size: 16px;
       font-weight: bold;
-      padding: 20px 0 10px 0;
+      padding: 20px 0 0 0;
     }
     .account-profile-img{
-      height: 200px;
-      width: 200px;
+      height: 160px;
+      width: 160px;
       display: block;
-      margin-left: auto;
-      margin-right: auto;
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.55);
+      margin: 10px auto;
     }
     .account-resident-since{
       display: block;
@@ -236,6 +252,84 @@ a{
   }
   .mdl-tabs__tab.is-active{
     color: #1AA5B8!important;
+    font-weight: bold;
+  }
+  .mdl-tabs__tab {
+    color: white!important;
+    font-weight: 300;
+
+  }
+
+  .account-info-header {
+    color: #1AA5B8;
+    font-weight: bold;
+    font-size: 16px;
+    //margin: 8px 0 8px 0;
+    position: relative;
+    right:  30px;
+    i{
+      position: relative;
+      top: 5px;
+      right: 5px;
+    }
+  }
+  .contact-information{
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
+    width: 300px;
+    padding-left: 100px;
+    padding-right: 65px;
+    line-height: 2;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  .complex-information{
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
+    width: 300px;
+    padding-left: 100px;
+    padding-right: 65px;
+    line-height: 2;
+  }
+  .account-lease-tab{
+    .buttons-container{
+      flex-direction: column;
+      margin-bottom: 0;
+      .button-container{
+        margin: 2px;
+        button{
+          background-color: #E4F0F5;
+          color: #1AA5B8;
+          width: 192px;
+        }
+      }
+    }
+  }
+  .account-settings-tab{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    .settings-header{
+      font-family: Roboto;
+      font-weight: 500;
+      font-size: 16px;
+      color: #1AA5B8;
+      letter-spacing: 0;
+      margin: 12px 16px;
+    }
+    .notification-switch{
+      margin-left: auto;
+      margin-right: auto;
+      width: 150px;
+      font-weight: 300;
+      margin-bottom: 8px;
+
+    }
+
+
   }
 }
 
