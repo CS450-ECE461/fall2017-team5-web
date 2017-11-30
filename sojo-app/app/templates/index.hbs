@@ -1,8 +1,22 @@
 {{#mdl-layout fixedHeader=true}}
     {{dashboard-clock}}
     {{log isSignedIn}}
-    <h5>Hello, {{model.username}}</h5>
-    <button {{action "signOut"}}>Sign Out</button>
-    {{outlet}}
+    {{#mdl-tabs rippleEffect=true activeTab=0 }}
+      {{#mdl-tabs-tab-bar colored=true}}
+        {{#mdl-tabs-tab}}Personal{{/mdl-tabs-tab}}
+        {{#mdl-tabs-tab}}Community{{/mdl-tabs-tab}}
+      {{/mdl-tabs-tab-bar}}
+
+      {{#mdl-tabs-panel}}
+        {{dashboard-event month="Nov" day="2" name="Package Arrived!" description="You have a package that is ready to be picked up from the office!"}}
+        {{dashboard-event month="Nov" day="5" name="Service Request Update" description="We have received your request to fix your sink."}}
+      {{/mdl-tabs-panel}}
+
+      {{#mdl-tabs-panel}}
+        {{dashboard-event month="Nov" day="4" name="A Message From Your Landlord" description="Eagle Drive will be closed for renovations. Please follow signs."}}
+        {{dashboard-event month="Nov" day="22" name="Thanksgiving Social" description="Come eat turky with us from 3pm-6pm in the main office!"}}
+      {{/mdl-tabs-panel}}
+
+    {{/mdl-tabs}}
 {{/mdl-layout}}
 

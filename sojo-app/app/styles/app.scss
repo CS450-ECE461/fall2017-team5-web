@@ -24,6 +24,22 @@ body{
   }
 }
 
+.mdl-tabs__tab-bar{
+  background-color: rgba(26,165,184,.4);
+  font-size: 14px;
+  height: 38px;
+}
+.mdl-tabs__tab.is-active{
+  color: #1AA5B8!important;
+  font-weight: bold;
+}
+.mdl-tabs__tab {
+  color: white!important;
+  font-weight: 300;
+  height: 38px;
+  line-height: 38px;
+}
+
 body.mdl-route__login{
 #sojo-logo{
     width: 212px;
@@ -209,6 +225,12 @@ a {
 }
 
 .mdl-route__account{
+  .logout-button{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    color: white;
+  }
   .account-header{
     width: 100%;
     background: rgba(26,165,184,1);
@@ -241,19 +263,6 @@ a {
       margin-left: auto;
       margin-right: auto;
     }
-  }
-  .mdl-tabs__tab-bar{
-    background-color: rgba(26,165,184,.4);
-    font-size: 14px;
-  }
-  .mdl-tabs__tab.is-active{
-    color: #1AA5B8!important;
-    font-weight: bold;
-  }
-  .mdl-tabs__tab {
-    color: white!important;
-    font-weight: 300;
-
   }
 
   .account-info-header {
@@ -337,13 +346,24 @@ a {
 }
 
 .mdl-route__index {
-
   .dashboard-clock {
     background-color: #1AA5B8;
-    padding: 30px 0;
+    padding: 10px 0 30px 0;
+    .month{
+      width: 100%;
+      padding-bottom: 25px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 300;
+      color: white;
+      font-size: 20px;
+      color: #FFFFFF;
+      letter-spacing: 3.36px;
+      padding-top: 16px;
+    }
     .clock-ticks{
       position: relative;
-      margin: 0 auto -212px auto;
+      margin: 0 auto -190px auto;
       display: block;
       width: 212px;
       top: -227px;
@@ -358,6 +378,20 @@ a {
       border-color: rgba(255, 255, 255, .25);
       border-radius: 50%;
       margin: 0 auto 0;
+      .countdown{
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding-top: 80px;
+        color: white;
+        font-weight: 300;
+        .countdown-days{
+          display: block;
+          font-size: 30px;
+          font-weight: bold;
+          margin-top: 5px;
+        }
+      }
       .button-container {
         display: block;
         position: absolute;
@@ -368,6 +402,58 @@ a {
         margin: -15px;
         //padding:
       }
+      .utility-marker{
+        display: block;
+        position: absolute;
+        top: 49%;
+        left: 49%;
+        width: 30px;
+        height: 30px;
+        margin: -15px;
+        button {
+          width: 35px;
+          height: 35px;
+          min-width: 30px;
+          background-color: #FDBE0E;
+          color: white;
+          font-size: 12px;
+          font-weight: bold;
+        }
+        span{
+          color: white;
+          font-size: 10px;
+          font-weight: bold;
+          position: relative;
+        }
+      }
+      .rent-marker{
+        display: block;
+        position: absolute;
+        top: 49%;
+        left: 50%;
+        width: 30px;
+        height: 30px;
+        margin: -15px;
+        z-index: 9;
+        span{
+          color: white;
+          font-size: 10px;
+          font-weight: bold;
+          position: relative;
+          left: 3px;
+        }
+        button {
+          width: 35px;
+          height: 35px;
+          min-width: 30px;
+          background-color: rgba(21, 137, 152, 1);
+          color: white;
+          font-size: 12px;
+          font-weight: bold;
+          position: relative;
+          left: -3px;
+        }
+      }
       .day-count {
         display: block;
         position: absolute;
@@ -376,7 +462,9 @@ a {
         width: 30px;
         height: 30px;
         margin: -15px;
+        z-index: 9999999;
         button {
+          box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.34);
           width: 30px;
           height: 30px;
           min-width: 30px;
@@ -400,6 +488,44 @@ a {
             transform: rotate(#{-(dayToDegrees(30))}deg) translate(116.5px) rotate(#{(dayToDegrees(30))}deg);
           }
         }
+      }
+
+
+
+    }
+  }
+  .dashboard-event{
+    width: 100%;
+    margin-left: 25px;
+    margin-right: 25px;
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    .event-meta{
+      display: inline-block;
+      width: 250px;
+      .event-title{
+        font-size: 16px;
+        color: #1AA5B8;
+        font-weight: bold;
+      }
+      .event-description{
+        font-size: 16px;
+        font-weight: 300;
+      }
+    }
+    .event-date{
+      float: left;
+      background-color: #1AA5B8;
+      border: 2px solid;
+      border-radius: 15%;
+      color: white;
+      border-color: #1AA5B8;
+      padding: 0 5px;
+      margin-right: 15px;
+      font-weight: 300;
+      .event-month{
+        font-weight: bold;
       }
     }
   }

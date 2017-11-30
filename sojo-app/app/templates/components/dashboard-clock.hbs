@@ -1,6 +1,15 @@
 {{yield}}
 <div class="dashboard-clock">
+  <div class="month">{{month}}</div>
 <div class="circle-container">
+  <div class="rent-marker day-1">{{#mdl-fab}}{{mdl-icon "home"}}{{/mdl-fab}}<br><span>Rent</span></div>
+  <div class="utility-marker day-16">{{#mdl-fab}}{{mdl-icon "power"}}{{/mdl-fab}}<br><span>Utilities</span></div>
+  {{#if billDueImmediately}}
+    <div class="countdown">{{nextBillDue}} due <span class="countdown-days">today!</span></div>
+  {{else}}
+    <div class="countdown">{{nextBillDue}} due in <span class="countdown-days">{{format-days daysRemaining}}</span></div>
+  {{/if}}
+
   <div class="day-count day-{{day}}">{{#mdl-fab}}{{day}}{{/mdl-fab}}</div>
 </div>
   <div class="clock-ticks">
