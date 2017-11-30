@@ -1,6 +1,5 @@
 @import "app-colors";
 @import "routes";
-
 @import "material-design-lite";
 
 $color-secondary: "253,190,14";
@@ -33,81 +32,105 @@ body.mdl-route__login{
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
-}
+  }
 
-
-.login-form{
-    width:80%;
+  .login-form {
+    width: 80%;
     display: block;
     margin-left: auto;
     margin-right: auto;
 
-    #register.mdl-button{
-        background-color: rgb(253,190,14);
-        color: white;
-        text-decoration: none;
+    #register.mdl-button {
+      background-color: rgb(253, 190, 14);
+      color: white;
+      text-decoration: none;
     }
 
-    .mdl-button{
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        width: 128px;
+    .mdl-button {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      width: 128px;
     }
 
-    a{
-        text-decoration: none;
+    a {
+      text-decoration: none;
     }
 
+  }
 
-}
-
-
-.forgot-password{
+  .forgot-password {
     text-align: right;
     float: right;
     text-decoration: none;
     position: relative;
     top: -25px;
-}
+  }
 
 }
 
-.menu-nav-container{
-    position: absolute;
-    bottom: 0;
-    background-color: #F5F5F5;
-    width: 100%;
-    height: 55px;
-    align-content: space-evenly;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    z-index: 1000000000;
-    padding-top: 5px;
-    .menu-nav-item{
-        font-size: 10px;
-        color: #BDBDBD;
-        text-decoration: none;
-        a{
-            text-decoration: none;
-            color: #BDBDBD;
-        }
-        svg{
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
+//.menu-nav-container{
+//    position: absolute;
+//    bottom: 0;
+//    background-color: #F5F5F5;
+//    width: 100%;
+//    height: 55px;
+//    align-content: space-evenly;
+//    display: flex;
+//    flex-flow: row wrap;
+//    justify-content: space-evenly;
+//    align-items: center;
+//    z-index: 1000000000;
+//    padding-top: 5px;
+//    .menu-nav-item{
+//        font-size: 10px;
+//        color: #BDBDBD;
+//        text-decoration: none;
+//        a{
+//            text-decoration: none;
+//            color: #BDBDBD;
+//        }
+//        svg{
+//            display: block;
+//            margin-left: auto;
+//            margin-right: auto;
+//        }
+//=======
+.menu-nav-container {
+  position: absolute;
+  bottom: 0;
+  background-color: #F5F5F5;
+  width: 100%;
+  height: 55px;
+  align-content: space-evenly;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 1000000000;
+  padding-top: 5px;
+  .menu-nav-item {
+    font-size: 10px;
+    color: #BDBDBD;
+    text-decoration: none;
+    a {
+      text-decoration: none;
+      color: #BDBDBD;
     }
+    svg {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 
-.mdl-layout__content{
-    padding: 10px;
+.mdl-layout__content {
+  padding: 10px;
 }
 
-a{
-    color: rgb(26,165,184);
+a {
+  color: rgb(26, 165, 184);
 }
 
 .mdl-layout__header > .mdl-layout-icon {
@@ -335,4 +358,78 @@ a{
 
 .img-circle {
   border-radius: 50%;
+}
+=======
+  left: 16px;
+  top: 16px;
+  color: #C5E8ED;
+}
+
+.mdl-route__index {
+
+  .dashboard-clock {
+    background-color: #1AA5B8;
+    padding: 30px 0;
+    .clock-ticks{
+      position: relative;
+      margin: 0 auto -212px auto;
+      display: block;
+      width: 212px;
+      top: -227px;
+    }
+    .circle-container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      padding: 15px;
+      /*21px = 15px*1.4 (15px = half the width of a circle, 1.4 = sqrt(2))*/
+      border: solid 6px;
+      border-color: rgba(255, 255, 255, .25);
+      border-radius: 50%;
+      margin: 0 auto 0;
+      .button-container {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 36px;
+        height: 36px;
+        margin: -15px;
+        //padding:
+      }
+      .day-count {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 30px;
+        height: 30px;
+        margin: -15px;
+        button {
+          width: 30px;
+          height: 30px;
+          min-width: 30px;
+          background-color: white;
+          color: #FDBE0E;
+          font-size: 12px;
+          font-weight: bold;
+        }
+        //padding:
+      }
+      @function dayToDegrees($day) {
+        //360/30 = 12deg per day
+
+        @return 90 - ($day - 1) * 12;
+      }
+      @for $i from 1 through 31 {
+        .day-#{$i} {
+          @if $i <= 30 {
+            transform: rotate(#{-(dayToDegrees($i))}deg) translate(116.5px) rotate(#{dayToDegrees($i)}deg);
+          } @else {
+            transform: rotate(#{-(dayToDegrees(30))}deg) translate(116.5px) rotate(#{(dayToDegrees(30))}deg);
+          }
+        }
+      }
+    }
+  }
 }
