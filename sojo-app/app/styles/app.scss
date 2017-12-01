@@ -1,6 +1,7 @@
 @import "app-colors";
 @import "routes";
 @import "material-design-lite";
+@import "ember-power-calendar";
 
 $color-secondary: "253,190,14";
 
@@ -527,6 +528,26 @@ a {
       .event-month{
         font-weight: bold;
       }
+    }
+  }
+}
+
+.mdl-route__calendar{
+  .calendar-top-bg{
+    background-color: #1AA5B8;
+    width: 100%;
+
+  }
+  .event-calendar {
+    @include ember-power-calendar($cell-size: 42px);
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 26px;
+    width: 306px;
+    padding-bottom: 26px;
+    color: white;
+    .ember-power-calendar-nav-control{
+      color: white!important;
     }
   }
 }
