@@ -18,7 +18,10 @@ Router.map(function() {
   this.route('bill-pay');
   this.route('calendar');
   this.route('account');
-  this.route('forgot-password');
+  this.route('forgot_password', function() {
+    this.route('enter_email');
+    this.route('email_sent');
+  });
 });
 
 export default Router;
