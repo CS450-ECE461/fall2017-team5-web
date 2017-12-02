@@ -11,7 +11,7 @@ module.exports = function(environment) {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
-        
+
         // This must be enabled for account adapter to work.
         'ds-improved-ajax': true
       },
@@ -20,7 +20,7 @@ module.exports = function(environment) {
         Date: false
       }
     },
-
+    filestackKey: 'Ab8bdusfVTqWSoireMWsQz',
     gatekeeper: {
         baseUrl: 'http://localhost:5000/gatekeeper',
         tokenOptions: {
