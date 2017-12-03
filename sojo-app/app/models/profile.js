@@ -7,7 +7,10 @@ export default DS.Model.extend({
   has_signed_lease: DS.attr('boolean'),
   sojo_events: DS.hasMany('event'),
   account_id: DS.belongsTo('account'),
-  avatar_url: Ember.computed('full_name', function(){
+  account_picture_url: DS.belongsTo('string'),
+  generated_avatar_url: Ember.computed('full_name', function(){
     return "https://ui-avatars.com/api/?name=" + encodeURI(this.get('full_name')) + "&background=FDBD0E&color=fff&size=160"
-  })
+  }),
+  electric_utility: DS.belongsTo('utility'),
+  cable_utility: DS.belongsTo('utility')
 });
