@@ -3,14 +3,47 @@
   {{#power-calendar-multiple
     center=center
     selected=eventDates
-    onCenterChange=(action (mut center) value="date") as |calendar|}}
-    {{calendar.nav}}
-    {{calendar.days}}
+    onCenterChange=(action (mut center) value="date")
+    onSelect=(action "updateSelectedDate" ) as |calendar|
+  }}
+    <nav class="ember-power-calendar-nav">
+      <button type="button" class="ember-power-calendar-nav-control" onclick={{action calendar.actions.moveCenter -1 'month'}}>{{mdl-icon "chevron_left"}}</button>
+      <div class="ember-power-calendar-nav-title">
+        {{moment-format calendar.center 'MMMM YYYY'}}
+      </div>
+      <button class="ember-power-calendar-nav-control" onclick={{action calendar.actions.moveCenter 1 'month'}}>{{mdl-icon "chevron_right"}}</button>
+    </nav>
+    {{#calendar.days showDaysAround=false as |day|}}
+      {{#with (moment-format day.date 'ddd') as |weekday|}}
+          <div class="day-number">{{day.number}}</div>
+        {{#if (is-same-date day.date selectedDate)}}
+          {{#if day.isSelected}}
+            <div class="is-selected has-event"></div>
+          {{else}}
+            <div class="is-selected has-no-event"></div>
+          {{/if}}
+        {{/if}}
+          <div class="event-dots">
+        {{#if day.isSelected}}
+          <svg width="6px" height="6px" viewBox="0 0 6 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Calendar" transform="translate(-126.000000, -245.000000)" fill="#FDBE0E">
+                  <circle id="11th" transform="translate(129.000000, 248.000000) scale(1, -1) translate(-129.000000, -248.000000) " cx="129" cy="248" r="3"></circle>
+                </g>
+              </g>
+            </svg>
+        {{/if}}
+          </div>
+      {{/with}}
+    {{/calendar.days}}
   {{/power-calendar-multiple}}
 </div>
   </div>
   <div class="calendar-event-list">
-    (TODO: make calendar event component)
+    Show events for: {{selectedDate}}
     {{dashboard-event month="Nov" day="4" name="A Message From Your Landlord" description="Eagle Drive will be closed for renovations. Please follow signs."}}
     {{dashboard-event month="Nov" day="22" name="Thanksgiving Social" description="Come eat turky with us from 3pm-6pm in the main office!"}}
   </div>

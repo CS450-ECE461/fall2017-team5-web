@@ -544,10 +544,66 @@ a {
     margin-right: auto;
     padding-top: 26px;
     width: 306px;
-    padding-bottom: 26px;
+    //padding-bottom: 26px;
     color: white;
+
+    .ember-power-calendar-weekday{
+      color:rgba(255,255,255,.4);
+    }
+
     .ember-power-calendar-nav-control{
       color: white!important;
     }
+
+    .ember-power-calendar-nav-title{
+      font-family: Roboto-Bold;
+      font-size: 24px;
+      color: #FFFFFF;
+    }
+    .ember-power-calendar-day{
+      background-color: transparent;
+      color: rgba(255,255,255,.4)
+    }
+
+    .ember-power-calendar-day--current-month{
+      background-color: transparent;
+    }
+    .ember-power-calendar-day--today{
+      color: white;
+      .day-number{
+        color: white!important;
+      }
+    }
+    .ember-power-calendar-day--focused{
+      box-shadow: none;
+    }
+    .is-selected{
+      width: 25px;
+      border-bottom: 2px solid white;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .is-selected.has-event{
+      position: relative;
+      top: 5px;
+    }
+    .is-selected.has-no-event {
+      position: relative;
+      bottom: 3px;
+    }
+    .ember-power-calendar-day--selected {
+      .day-number{
+        position: relative;
+        bottom: -8px;
+        color: rgba(255,255,255,.4);
+      }
+    }
+    .day-number {
+      margin-bottom: 5px;
+    }
+    .ember-power-calendar-day:not([disabled]):hover{
+      background-color: transparent;
+    }
   }
+
 }
