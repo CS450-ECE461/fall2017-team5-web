@@ -18,6 +18,7 @@ Router.map(function () {
   this.route('bill-pay');
   this.route('calendar');
   this.route('account');
+  this.route('pay');
 });
 
 export default Router;
