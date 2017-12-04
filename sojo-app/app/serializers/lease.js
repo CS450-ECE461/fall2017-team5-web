@@ -1,6 +1,10 @@
 import DS from 'ember-data';
 
-export default DS.JSONAPISerializer.extend({
+export default DS.RESTSerializer.extend({
+  primaryKey: 'account_id',
+  keyForAttribute(key) {
+    return Ember.String.underscore(key);
+  },
   normalizeResponse(store, primaryModelClass, payload, id) {
     payload = {
       data: {
