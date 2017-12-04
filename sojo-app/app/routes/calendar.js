@@ -1,8 +1,10 @@
 import Gatekeeper from 'ember-cli-gatekeeper';
 
 export default Gatekeeper.User.AuthenticatedRoute.extend({
-    model(){
-        let currentUser = this.get ('currentUser');
-        return currentUser;     
-    }
+  model() {
+    return Ember.RSVP.hash({
+      currentUser: this.get('currentUser'),
+      events: this.get('store').findAll('event')
+    });
+  }
 });

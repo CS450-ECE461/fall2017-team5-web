@@ -1,9 +1,9 @@
 import Ember from 'ember';
 
 export function formatDay([value, ...rest]) {
-  if (value < 10){
+  if (value < 10) {
     return `0${value}`
-  }else{
+  } else {
     return value;
   }
 }

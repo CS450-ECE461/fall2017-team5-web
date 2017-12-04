@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sojo</title>
-    <meta name="description" content="">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700" type="text/css">
-    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Sojo</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700"
+        type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    {{content-for "head"}}
+  {{content-for "head"}}
 
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/sojo-app.css">
+  <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+  <link integrity="" rel="stylesheet" href="{{rootURL}}assets/sojo-app.css">
 
-    {{content-for "head-footer"}}
-  </head>
-  <body>
-    {{content-for "body"}}
+  {{content-for "head-footer"}}
+</head>
+<body>
+{{content-for "body"}}
 
-    <script src="{{rootURL}}assets/vendor.js"></script>
-    <script src="{{rootURL}}assets/sojo-app.js"></script>
+<script src="{{rootURL}}assets/vendor.js"></script>
+<script src="{{rootURL}}assets/sojo-app.js"></script>
 
-    {{content-for "body-footer"}}
-  </body>
+{{content-for "body-footer"}}
+</body>
 </html>

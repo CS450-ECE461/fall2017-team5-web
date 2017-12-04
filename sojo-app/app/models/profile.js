@@ -5,9 +5,12 @@ export default DS.Model.extend({
   phone: DS.attr('string'),
   has_bill_pay_setup: DS.attr('boolean'),
   has_signed_lease: DS.attr('boolean'),
-  sojo_events: DS.hasMany('event'),
+  sojo_events: DS.hasMany('private-events'),
   account_id: DS.belongsTo('account'),
-  avatar_url: Ember.computed('full_name', function(){
+  account_picture_url: DS.attr('string'),
+  generated_avatar_url: Ember.computed('full_name', function () {
     return "https://ui-avatars.com/api/?name=" + encodeURI(this.get('full_name')) + "&background=FDBD0E&color=fff&size=160"
-  })
+  }),
+  electric_utility: DS.attr('utility'),
+  cable_utility: DS.attr('utility')
 });

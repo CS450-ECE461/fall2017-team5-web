@@ -4,41 +4,41 @@
   {{/mdl-layout-header}}
 
   {{#mdl-layout-content}}
-  {{#if errorMessage}}
-  {{errorMessage}}
-  {{/if}}
-  <br><br>
+    {{#if errorMessage}}
+      {{errorMessage}}
+    {{/if}}
+    <br><br>
     <form {{action "createAccount" on="submit"}}>
-  {{mdl-textfield type="email"
-                  value=email
-                  placeholder="Enter your email"
-                  required=true
-                  autocapitalize="none"
-                  label="Email"}}
-  <br/>
-  {{mdl-textfield type="text"
-                  value=username
-                  placeholder="Enter your username"
-                  required=true
-                  autocapitalize="none"
-                  label="Username"}}
-  <br/>
-  {{mdl-textfield type="password"
-                  value=password
-                  placeholder="Enter your password"
-                  required=true
-                  autocapitalize="none"
-                  label="Password"}}
-  <br/><br>
-  <br>
-  <br>
-  {{#mdl-button type="submit"
-                colored=true
-                disabled=isSigningIn}}
-    Register
-  {{/mdl-button}}
-  </form>
+      {{mdl-textfield type="email"
+                      value=email
+                      placeholder="Enter your email"
+                      required=true
+                      autocapitalize="none"
+                      label="Email"}}
+      <br/>
+      {{mdl-textfield type="text"
+                      value=username
+                      placeholder="Enter your username"
+                      required=true
+                      autocapitalize="none"
+                      label="Username"}}
+      <br/>
+      {{mdl-textfield type="password"
+                      value=password
+                      placeholder="Enter your password"
+                      required=true
+                      autocapitalize="none"
+                      label="Password"}}
+      <br/><br>
+      <br>
+      <br>
+      {{#mdl-button type="submit"
+                    colored=true
+                    disabled=isSigningIn}}
+        Register
+      {{/mdl-button}}
+    </form>
     {{outlet}}
-   {{/mdl-layout-content}}
+  {{/mdl-layout-content}}
 {{/mdl-layout}}
 

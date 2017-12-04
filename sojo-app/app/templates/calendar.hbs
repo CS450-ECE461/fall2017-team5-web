@@ -1,11 +1,147 @@
-{{#mdl-layout fixedHeader=true}}
-  {{#mdl-layout-header}}
-    {{mdl-toolbar title="Calendar" navigateUpTo="index"}}
-  {{/mdl-layout-header}}
+<div class="calendar-top-bg">
+  <div class="event-calendar">
+    {{#power-calendar
+      center=center
+      selected=selectedDate
+      onCenterChange=(action (mut center) value="date")
+      onSelect=(action (mut selectedDate) value="date") as |calendar|}}
+      <nav class="ember-power-calendar-nav">
+        <button type="button" class="ember-power-calendar-nav-control" onclick={{action calendar.actions.moveCenter -1
+                                                                                        'month'}}>{{mdl-icon
+          "chevron_left"}}</button>
+        <div class="ember-power-calendar-nav-title">
+          {{moment-format calendar.center 'MMMM YYYY'}}
+        </div>
+        <button class="ember-power-calendar-nav-control" onclick={{action calendar.actions.moveCenter 1
+                                                                          'month'}}>{{mdl-icon
+          "chevron_right"}}</button>
+      </nav>
+      {{#calendar.days showDaysAround=false as |day|}}
+        {{#with (moment-format day.date 'ddd') as |weekday|}}
+          {{#if (is-in-date-array model.events day.date)}}
+            <div class="day-number has-event">{{day.number}}</div>
+          {{else}}
+            <div class="day-number has-no-event">{{day.number}}</div>
+          {{/if}}
+          {{#if day.isSelected}}
+            {{#if (is-in-date-array model.events day.date)}}
+              <div class="is-selected"></div>
+            {{else}}
+              <div class="is-selected no-event"></div>
+            {{/if}}
+          {{/if}}
+          <div class="event-dots">
+            {{#if (is-bill-day model.events day.date)}}
+              <svg width="6px" height="6px" viewBox="0 0 6 6" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                   xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="Calendar" transform="translate(-126.000000, -245.000000)" fill="#FDBE0E">
+                    <circle id="11th"
+                            transform="translate(129.000000, 248.000000) scale(1, -1) translate(-129.000000, -248.000000) "
+                            cx="129" cy="248" r="3"></circle>
+                  </g>
+                </g>
+              </svg>
+            {{/if}}
+            {{#if (is-event-day model.events day.date)}}
+              <svg width="6px" height="6px" viewBox="0 0 6 6" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                   xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.6">
+                  <g id="Calendar" transform="translate(-320.000000, -165.000000)" fill="#FFFFFF">
+                    <g id="1-and-selector" transform="translate(311.000000, 159.000000)">
+                      <circle id="1-blue"
+                              transform="translate(12.000000, 9.000000) scale(1, -1) translate(-12.000000, -9.000000) "
+                              cx="12" cy="9" r="3"></circle>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            {{/if}}
+            {{#if (is-service-day model.events day.date)}}
+              <svg width="6px" height="6px" viewBox="0 0 6 6" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                   xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="Calendar" transform="translate(-327.000000, -165.000000)" fill="#D8D8D8">
+                    <g id="1-and-selector" transform="translate(311.000000, 159.000000)">
+                      <circle id="1-gray"
+                              transform="translate(19.000000, 9.000000) scale(1, -1) translate(-19.000000, -9.000000) "
+                              cx="19" cy="9" r="3"></circle>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            {{/if}}
+          </div>
+        {{/with}}
+      {{/calendar.days}}
+    {{/power-calendar}}
+  </div>
+</div>
+<div class="calendar-event-list">
+  {{#if (no-events-for-day model.events selectedDate)}}
+    <div class="no-events">No Events</div>
+  {{/if}}
+  <div class="events-category">
+    {{#each (bill-types-for-day model.events selectedDate) as |event|}}
+      <div class="event">
+        <div class="event-dot">
+          <svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg"
+               xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Calendar" transform="translate(-47.000000, -432.000000)" fill="#FDBE0E">
+                <g id="Rent-Due" transform="translate(47.000000, 430.000000)">
+                  <circle id="Oval-Copy-18" cx="8.5" cy="10.5" r="8.5"></circle>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="event-name">{{event.name}}</div>
+      </div>
+    {{/each}}
+  </div>
 
-  {{#mdl-layout-content}}
-    <h3>Calendar</h3>
-    {{outlet}}
-   {{/mdl-layout-content}}
-{{/mdl-layout}}
+  <div class="events-category">
+    {{#each (event-types-for-day model.events selectedDate) as |event|}}
+      <div class="event">
+        <div class="event-dot">
+          <svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg"
+               xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.4">
+              <g id="Calendar-Deets" transform="translate(-48.000000, -255.000000)" fill="#1AA5B8">
+                <g id="Events" transform="translate(32.000000, 224.000000)">
+                  <g id="Resident-Appreciation-Week" transform="translate(16.000000, 29.000000)">
+                    <circle id="Oval-Copy-20" cx="8.5" cy="10.5" r="8.5"></circle>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="event-name">{{event.name}}</div>
+      </div>
+    {{/each}}
+  </div>
 
+  <div class="events-category">
+    {{#each (service-types-for-day model.events selectedDate) as |event|}}
+      <div class="event">
+        <div class="event-dot">
+          <svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg"
+               xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Calendar-Deets" transform="translate(-49.000000, -367.000000)" fill="#D8D8D8">
+                <g id="Services" transform="translate(32.000000, 336.000000)">
+                  <circle id="Oval-Copy-21" cx="25.5" cy="39.5" r="8.5"></circle>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="event-name">{{event.name}}</div>
+      </div>
+    {{/each}}
+  </div>
+
+
+</div>

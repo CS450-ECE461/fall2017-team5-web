@@ -1,47 +1,52 @@
 @import "app-colors";
 @import "routes";
 @import "material-design-lite";
+@import "ember-power-calendar";
 
 $color-secondary: "253,190,14";
 
-body{
+body {
   font-family: "Roboto";
   color: #9E9E9E;
 }
 
-.mdl-switch__thumb{
-  background-color: #BDBDBD!important;
+.mdl-switch__thumb {
+  background-color: #BDBDBD !important;
 }
-.mdl-switch__track{
-  background-color: rgba(0,0,0,.1)!important;
+
+.mdl-switch__track {
+  background-color: rgba(0, 0, 0, .1) !important;
 }
-.mdl-switch.is-checked{
+
+.mdl-switch.is-checked {
   .mdl-switch__thumb {
-    background: rgb(253,190,14)!important;
+    background: rgb(253, 190, 14) !important;
   }
   .mdl-switch__track {
-    background: rgba(253,190,14,.2)!important;
+    background: rgba(253, 190, 14, .2) !important;
   }
 }
 
-.mdl-tabs__tab-bar{
-  background-color: rgba(26,165,184,.4);
+.mdl-tabs__tab-bar {
+  background-color: rgba(26, 165, 184, .4);
   font-size: 14px;
   height: 38px;
 }
-.mdl-tabs__tab.is-active{
-  color: #1AA5B8!important;
+
+.mdl-tabs__tab.is-active {
+  color: #1AA5B8 !important;
   font-weight: bold;
 }
+
 .mdl-tabs__tab {
-  color: white!important;
+  color: white !important;
   font-weight: 300;
   height: 38px;
   line-height: 38px;
 }
 
-body.mdl-route__login{
-#sojo-logo{
+body.mdl-route__login {
+  #sojo-logo {
     width: 212px;
     height: 212px;
     display: block;
@@ -123,26 +128,26 @@ a {
 }
 
 .mdl-layout__header > .mdl-layout-icon {
-    left: 16px;
-    top: 16px;
-    color: #C5E8ED;
+  left: 16px;
+  top: 16px;
+  color: #C5E8ED;
 }
 
-.buttons-container{
+.buttons-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-top: 25px;
 
-  .service-button{
+  .service-button {
     margin: 20px 0 20px 0;
     text-align: center;
     flex: 1;
     font-size: 14px;
     color: #9E9E9E;
     letter-spacing: 0;
-    button{
-      margin-bottom: 30px!important;
+    button {
+      margin-bottom: 30px !important;
     }
   }
   .service-button-large > button {
@@ -150,30 +155,30 @@ a {
     height: 80px;
   }
   .maintenance-request-button > button,
-  .message-landlord-button > button{
+  .message-landlord-button > button {
     width: 140px;
     height: 140px;
-    margin-bottom: 16px!important;
+    margin-bottom: 16px !important;
     box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, .24);
   }
 }
 
-.service-selection-container{
+.service-selection-container {
   flex-direction: column;
-  .button-container{
+  .button-container {
     margin: 36px;
   }
 }
 
-.mdl-route__services{
-  #message-landlord-icon{
+.mdl-route__services {
+  #message-landlord-icon {
     display: block;
     margin-left: auto;
     margin-top: 63px;
     margin-right: auto;
   }
 
-  .mdl-textfield{
+  .mdl-textfield {
     width: 90%;
     display: block;
     margin-left: 20px;
@@ -184,16 +189,17 @@ a {
     margin-left: auto;
     margin-right: auto;
   }
-  .message-count{
+  .message-count {
     text-align: right;
     margin-right: 20px;
   }
-  .priority-switch{
+  .priority-switch {
     margin-top: 40px;
-    margin-left:19px;
+    margin-left: 19px;
     margin-bottom: 28px;
   }
 }
+
 .mdl-button--file {
   input {
     cursor: pointer;
@@ -207,56 +213,59 @@ a {
   }
 }
 
-#file { display: none }
+#file {
+  display: none
+}
 
-.add-maintenance-photo{
-  margin-left: 10px!important;
-  margin-right: 20px!important;
-  display: inline-block!important;
-  .add-photo-icon{
+.add-maintenance-photo {
+  margin-left: 10px !important;
+  margin-right: 20px !important;
+  display: inline-block !important;
+  .add-photo-icon {
     font-size: 30px;
     /* position: relative; */
     /* left: 0; */
     top: 38%;
   }
 }
-#request-submit-button{
+
+#request-submit-button {
   margin-top: 40px;
 }
 
-.mdl-route__account{
-  .logout-button{
+.mdl-route__account {
+  .logout-button {
     position: absolute;
     right: 8px;
     top: 8px;
     color: white;
   }
-  .account-header{
+  .account-header {
     width: 100%;
-    background: rgba(26,165,184,1);
+    background: rgba(26, 165, 184, 1);
     color: white;
-    .account-full-name{
+    .account-full-name {
       text-align: center;
       width: 100%;
       font-size: 16px;
       font-weight: bold;
       padding: 20px 0 0 0;
     }
-    .account-profile-img{
+    .account-profile-img {
       height: 160px;
       width: 160px;
       display: block;
       box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.55);
       margin: 10px auto;
     }
-    .account-resident-since{
+    .account-resident-since {
       display: block;
       margin-bottom: 5px;
       text-align: center;
       margin-left: auto;
       margin-right: auto;
     }
-    .account-lease-type{
+    .account-lease-type {
       display: block;
       padding-bottom: 20px;
       text-align: center;
@@ -271,14 +280,14 @@ a {
     font-size: 16px;
     //margin: 8px 0 8px 0;
     position: relative;
-    right:  30px;
-    i{
+    right: 30px;
+    i {
       position: relative;
       top: 5px;
       right: 5px;
     }
   }
-  .contact-information{
+  .contact-information {
     margin-left: auto;
     display: block;
     margin-right: auto;
@@ -289,7 +298,7 @@ a {
     margin-top: 30px;
     margin-bottom: 10px;
   }
-  .complex-information{
+  .complex-information {
     margin-left: auto;
     display: block;
     margin-right: auto;
@@ -298,13 +307,13 @@ a {
     padding-right: 65px;
     line-height: 2;
   }
-  .account-lease-tab{
-    .buttons-container{
+  .account-lease-tab {
+    .buttons-container {
       flex-direction: column;
       margin-bottom: 0;
-      .button-container{
+      .button-container {
         margin: 2px;
-        button{
+        button {
           background-color: #E4F0F5;
           color: #1AA5B8;
           width: 192px;
@@ -312,12 +321,12 @@ a {
       }
     }
   }
-  .account-settings-tab{
+  .account-settings-tab {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 300px;
-    .settings-header{
+    .settings-header {
       font-family: Roboto;
       font-weight: 500;
       font-size: 16px;
@@ -325,7 +334,7 @@ a {
       letter-spacing: 0;
       margin: 12px 16px;
     }
-    .notification-switch{
+    .notification-switch {
       margin-left: auto;
       margin-right: auto;
       width: 150px;
@@ -333,7 +342,6 @@ a {
       margin-bottom: 8px;
 
     }
-
 
   }
 }
@@ -349,7 +357,7 @@ a {
   .dashboard-clock {
     background-color: #1AA5B8;
     padding: 10px 0 30px 0;
-    .month{
+    .month {
       width: 100%;
       padding-bottom: 25px;
       text-align: center;
@@ -361,7 +369,7 @@ a {
       letter-spacing: 3.36px;
       padding-top: 16px;
     }
-    .clock-ticks{
+    .clock-ticks {
       position: relative;
       margin: 0 auto -190px auto;
       display: block;
@@ -378,14 +386,14 @@ a {
       border-color: rgba(255, 255, 255, .25);
       border-radius: 50%;
       margin: 0 auto 0;
-      .countdown{
+      .countdown {
         display: block;
         width: 100%;
         text-align: center;
         padding-top: 80px;
         color: white;
         font-weight: 300;
-        .countdown-days{
+        .countdown-days {
           display: block;
           font-size: 30px;
           font-weight: bold;
@@ -402,7 +410,7 @@ a {
         margin: -15px;
         //padding:
       }
-      .utility-marker{
+      .utility-marker {
         display: block;
         position: absolute;
         top: 49%;
@@ -419,14 +427,14 @@ a {
           font-size: 12px;
           font-weight: bold;
         }
-        span{
+        span {
           color: white;
           font-size: 10px;
           font-weight: bold;
           position: relative;
         }
       }
-      .rent-marker{
+      .rent-marker {
         display: block;
         position: absolute;
         top: 49%;
@@ -435,7 +443,7 @@ a {
         height: 30px;
         margin: -15px;
         z-index: 9;
-        span{
+        span {
           color: white;
           font-size: 10px;
           font-weight: bold;
@@ -490,31 +498,29 @@ a {
         }
       }
 
-
-
     }
   }
-  .dashboard-event{
+  .dashboard-event {
     width: 100%;
     margin-left: 25px;
     margin-right: 25px;
     display: inline-block;
     margin-top: 15px;
     margin-bottom: 10px;
-    .event-meta{
+    .event-meta {
       display: inline-block;
       width: 250px;
-      .event-title{
+      .event-title {
         font-size: 16px;
         color: #1AA5B8;
         font-weight: bold;
       }
-      .event-description{
+      .event-description {
         font-size: 16px;
         font-weight: 300;
       }
     }
-    .event-date{
+    .event-date {
       float: left;
       background-color: #1AA5B8;
       border: 2px solid;
@@ -524,9 +530,98 @@ a {
       padding: 0 5px;
       margin-right: 15px;
       font-weight: 300;
-      .event-month{
+      .event-month {
         font-weight: bold;
       }
     }
   }
+}
+
+.mdl-route__calendar {
+  .calendar-top-bg {
+    background-color: #1AA5B8;
+    width: 100%;
+
+  }
+  .event-calendar {
+    @include ember-power-calendar($cell-size: 42px);
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 26px;
+    width: 306px;
+    //padding-bottom: 26px;
+    color: white;
+
+    .ember-power-calendar-weekday {
+      color: rgba(255, 255, 255, .4);
+    }
+
+    .ember-power-calendar-nav-control {
+      color: rgba(255, 255, 255, .4) !important;
+    }
+
+    .ember-power-calendar-nav-title {
+      font-family: Roboto-Bold;
+      font-size: 24px;
+      color: #FFFFFF;
+    }
+    .ember-power-calendar-day {
+      background-color: transparent;
+      color: rgba(255, 255, 255, .4)
+    }
+    .ember-power-calendar-day--current-month {
+      background-color: transparent;
+    }
+    .ember-power-calendar-day--focused {
+      box-shadow: none;
+    }
+    .is-selected {
+      width: 25px;
+      border-bottom: 2px solid white;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      top: 2px;
+    }
+    .ember-power-calendar-day--selected {
+      .day-number {
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+    .event-dots {
+      height: 17px;
+    }
+    .ember-power-calendar-day:not([disabled]):hover {
+      background-color: transparent;
+    }
+  }
+
+  .calendar-event-list {
+    margin: 40px 40px 0 40px;
+    overflow-y: auto;
+    height: 200px;
+    .events-category {
+      .event {
+        margin-bottom: 25px;
+        .event-dot {
+          display: inline-block;
+          margin-right: 15px;
+          position: relative;
+          bottom: 2px;
+        }
+        .event-name {
+          display: inline-block;
+          font-size: 16px;
+          color: rgba(0, 0, 0, .4);
+        }
+      }
+    }
+    .no-events {
+      color: rgba(0, 0, 0, .2);
+      text-align: center;
+      margin-top: 40px;
+      font-size: 18px;
+    }
+  }
+
 }

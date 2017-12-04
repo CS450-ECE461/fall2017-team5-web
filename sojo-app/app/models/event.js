@@ -3,6 +3,8 @@ import DS from 'ember-data';
 export default DS.Model.extend({
   name: DS.attr('string'),
   date: DS.attr('date'),
-  site: DS.attr('string'),
-  attendees: DS.hasMany('account')
+  start_time: DS.attr('date'),
+  end_time: DS.attr('date'),
+  description: DS.attr('string'),
+  type: DS.attr('string'),
 });

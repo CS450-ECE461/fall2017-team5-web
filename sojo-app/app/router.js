@@ -6,11 +6,11 @@ const Router = Ember.Router.extend({
   rootURL: config.rootURL
 });
 
-Router.map(function() {
+Router.map(function () {
   this.route('login');
   this.route('register');
-  this.route('services', function() {
-    this.route('maintenance', function() {
+  this.route('services', function () {
+    this.route('maintenance', function () {
       this.route('send');
     });
     this.route('message');
