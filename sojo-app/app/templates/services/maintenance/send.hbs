@@ -5,7 +5,7 @@
 
   {{#mdl-layout-content}}
     <div class="priority-switch">
-    {{mdl-switch label="High Priority" colored=true}}
+      {{mdl-switch label="High Priority" colored=true}}
     </div>
     <br>
     {{mdl-textarea label="Please write a short description"
@@ -25,13 +25,15 @@
     <input type="file" id="file" accept="image/*">
     <label for="file" class="file-upload-label">
       <div class="mdl-button mdl-js-button mdl-button--fab mdl-button--primary add-maintenance-photo">
-      <i class="material-icons add-photo-icon">+</i>
-      </div> Add Photos
+        <i class="material-icons add-photo-icon">+</i>
+      </div>
+      Add Photos
     </label>
 
 
 
-    {{#mdl-button type="raised" colored=true click=(action (mut errorMessage) "Need to implement output") id="request-submit-button"}}Submit{{/mdl-button}}
+    {{#mdl-button type="raised" colored=true click=(action (mut errorMessage) "Need to implement output")
+                  id="request-submit-button"}}Submit{{/mdl-button}}
   {{/mdl-layout-content}}
 {{/mdl-layout}}
 

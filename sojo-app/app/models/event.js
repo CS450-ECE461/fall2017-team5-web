@@ -7,6 +7,4 @@ export default DS.Model.extend({
   end_time: DS.attr('date'),
   description: DS.attr('string'),
   type: DS.attr('string'),
-  site: DS.attr('string'),
-  attendees: DS.hasMany('account')
 });

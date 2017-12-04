@@ -3,8 +3,8 @@ import Ember from 'ember';
 
 
 export default Controller.extend({
-  isSignedIn: Ember.computed ('gatekeeper.isSignedIn', function () {
-      return this.get ('gatekeeper.isSignedIn');
+  isSignedIn: Ember.computed('gatekeeper.isSignedIn', function () {
+    return this.get('gatekeeper.isSignedIn');
   }),
   actions: {
     signOut() {
