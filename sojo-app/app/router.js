@@ -22,6 +22,7 @@ Router.map(function () {
     this.route('choose-method');
     this.route('create-user');
   });
+  this.route('pay');
 });
 
 export default Router;
