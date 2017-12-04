@@ -40,8 +40,42 @@ body{
   line-height: 38px;
 }
 
+.mdl-route__forgot_password{
+  #sojo-logo{
+    width: 212px;
+    height: 212px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+  }
+
+  .submit_email_div{
+    //Stuff only in enter email
+    text-align:center;
+
+  }
+  #submit_email_button.mdl-button{
+    background-color: rgb(27, 165, 183);
+    color: white;
+    text-decoration: none;
+  }
+  #input_email.mdl-textfield__input{
+    position: relative;
+    font-size: 16px;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 300px;
+    max-width: 100%;
+    margin: 1;
+    padding: 20px;
+  }
+}
+
+
+
 body.mdl-route__login{
-#sojo-logo{
+  #sojo-logo{
     width: 212px;
     height: 212px;
     display: block;
@@ -318,7 +352,7 @@ a {
     margin-right: auto;
     width: 300px;
     .settings-header{
-      font-family: Roboto;
+      font-family: Roboto, sans-serif;
       font-weight: 500;
       font-size: 16px;
       color: #1AA5B8;

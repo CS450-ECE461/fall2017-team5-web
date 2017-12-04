@@ -19,7 +19,7 @@ Router.map(function() {
   this.route('calendar');
   this.route('account');
   this.route('forgot_password', function() {
-    this.route('enter_email');
+    this.route('enter_email',{ path: '/'});
     this.route('email_sent');
   });
 });

@@ -1,53 +1,30 @@
 
-<img src="/assets/images/sojologo.png" >
-
-<br><br>
-<br><br>
-
-
-  {{#mdl-layout-content}}
-    <div style="padding: 16px; position: relative">
-      {{#mdl-form action="#" style="padding: 16px"}}
-
-        {{mdl-textfield label=""
-                        required=true
-                        fullWidth=true
-                        customError=customError
-                        placeholder="Email"
-                        errorMessage=errorMessage
-                        fullWidth=true
-                        floatingLabel=true
-                        tooltip="Text field"}}
-
-<br><br>
-<br><br>
-
-        {{#mdl-button type="raised" accent=true click=(action (mut errorMessage) "This is a custom error message")}}Submit{{/mdl-button}}
+    {{#mdl-layout-content id="input_email"}}
+        {{#mdl-form action="#"}}
+          {{mdl-textfield type=email
+                          value=email
+                          required=true
+                          fullWidth=true
+                          placeholder="Email"
+                          floatingLabel=usernameFloatingLabel
+                          errorMessage=usernameErrorMessage}}
 
 
+        {{/mdl-form}}
+    {{/mdl-layout-content}}
 
-      {{/mdl-form}}
-    </div>
-  {{/mdl-layout-content}}
+    {{mdl-textfield type=email
+                    value=email
+                    required=true
+                    fullWidth=true
+                    placeholder="Email"
+                    floatingLabel=usernameFloatingLabel
+                    errorMessage=usernameErrorMessage}}
 
-
-
- <!-- Compiled and minified CSS
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-          
-
-<img src="assets/images/sojologo.png" id="sojo-logo">
-
-  <div class="row">
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s12">
-          <textarea id="textarea1" class="materialize-textarea"></textarea>
-          <label for="textarea1">Email</label>
-        </div>
-      </div>
-    </form>
-  </div>
-         -->
+<div class="submit_email_div">
+  {{#link-to "forgot_password.email_sent"}}
+    {{#mdl-button type="raised" accent=true id="submit_email_button"}}
+      Submit
+    {{/mdl-button}}
+  {{/link-to}}
+</div>
