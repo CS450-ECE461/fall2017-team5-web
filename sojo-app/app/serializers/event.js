@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.JSONSerializer.extend({
-  primaryKey: '_id',
+  primaryKey: '_id.$oid',
   serialize(snapshot, options){
     console.log(snapshot);
     var json = this._super(...arguments);
