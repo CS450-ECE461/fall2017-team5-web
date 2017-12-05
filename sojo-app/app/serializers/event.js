@@ -12,6 +12,7 @@ export default DS.JSONSerializer.extend({
   },
   normalizeResponse(store, primaryModelClass, payload, id, requestType) {
     console.log(payload);
-    return this._super(...arguments);
+   // payload.id = payload.sojo_event._id;
+    return this._super(store, primaryModelClass, payload, id, requestType);
   }
 });
