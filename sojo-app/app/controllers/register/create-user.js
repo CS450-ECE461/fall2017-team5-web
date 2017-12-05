@@ -8,7 +8,7 @@ export default Ember.Controller.extend({
       let email = this.get('model.email');
       let password = this.get('model.password');
       let username = email;
-      let confirmationCode = this.get('model.confirmation_number');
+      let confirmationCode = this.get('model.confirmation_code');
       let account = this.get('store').createRecord('account', {username, password, email});
       let adapterOptions = {signIn: true};
       console.log('email is', email);

@@ -1,3 +1,4 @@
+<div class="page-confirmation-number">
 {{mdl-textfield type="text"
                 value=model.confirmation_code
                 placeholder="Enter your confirmation number"
@@ -7,3 +8,4 @@
 <br>
 {{#mdl-button colored=true click=(action "verifyCode")}}Next{{/mdl-button}}
 {{outlet}}
+</div>
