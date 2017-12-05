@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+
   actions: {
     createAccount() {
       let {email, username, password} = this.getProperties(['email', 'username', 'password']);

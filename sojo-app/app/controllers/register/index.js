@@ -1,22 +1,27 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  verificationError: "",
   actions: {
     verifyCode() {
-      $.ajax({
-        type: "POST",
-        url: "http://localhost:5000/checkcode",
-        data: {
-          confirmation_code: this.get('model.confirmation_code')
-        }
-      }).done(function(data){
-        if (data.valid){
-          this.transitionToRoute('register.create-user');
-        }else{
-          //TODO: code error message output
-          alert('invalid activation code');
-        }
-      }.bind(this));
+      if (!(typeof this.get('model.confirmation_code') === 'undefined')){
+        $.ajax({
+          type: "POST",
+          url: "http://localhost:5000/checkcode",
+          data: {
+            confirmation_code: this.get('model.confirmation_code')
+          }
+        }).done(function(data){
+          if (data.valid){
+            this.transitionToRoute('register.create-user');
+          }else{
+            this.set('verificationError', "Confirmation number is invalid!")
+          }
+        }.bind(this));
+      }else{
+        this.set('verificationError', "Confirmation number is required! This will be provided by your landlord.")
+      }
+
       //this.transitionToRoute('register.create-user');
       //let email = this.get('model.email');
       //let password = this.get('model.password');

@@ -2,6 +2,7 @@ import Ember from 'ember';
 import {inject as service} from '@ember/service';
 
 export default Ember.Controller.extend({
+  registrationError: "",
   gatekeeper: service(),
   actions: {
     createAccount() {
@@ -33,13 +34,12 @@ export default Ember.Controller.extend({
             account_id: account.get('id'),
             confirmation_code: confirmationCode
           },
-
         }).done(function(data){
           console.log('got back', data);
-          this.transitionToRoute('index');
+          this.transitionToRoute('register.verify');
         }.bind(this));
       }).catch(reason => {
-        console.log('error: ' + reason);
+        this.set('registrationError', 'Error registering user, account might already exist.')
       });
     },
   }

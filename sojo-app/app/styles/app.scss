@@ -171,8 +171,116 @@ a {
 }
 
 .mdl-route__register{
-  .page-confirmation-number{
+  #sojo-logo {
+    width: 212px;
+    height: 212px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+  }
 
+  #account-verified, .verify-header{
+    margin-top: 30px;
+    text-align: center;
+    color: #1ca5b8;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .verified-information{
+    color: rgb(28,165,184);
+    line-height: 2.5;
+    display: block;
+     margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: 238px;
+  }
+
+  #verify-self-btn, #add-event-btn{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 130px;
+  }
+
+  #verify-btn, .register-btn{
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    background: rgb(28,165,184);
+    color: rgb(255,255,255);
+    width: 130px;
+  }
+  #create-account-btn {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    background: rgb(28,165,184);
+    color: rgb(255,255,255);
+    width: 180px;
+  }
+  #text-wrapper__confirmation-field{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    .mdl-textfield__label {
+      color: rgb(28,165,184);
+      font-size: 18px;
+      top: -15px;
+      visibility: visible;
+    }
+  }
+  #registration-error{
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(158,158,158);
+  }
+#text-wrapper__signup-email, #text-wrapper__signup-password{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  .mdl-textfield__label {
+    color: rgb(28,165,184);
+    font-size: 18px;
+    top: -15px;
+    visibility: visible;
+  }
+}
+.page-confirmation-number{
+
+
+
+    .mdl-tooltip {
+      transform: scale(0);
+      transform-origin: top center;
+      z-index: 999;
+      background: rgba(97, 97, 97, 0);
+      border-radius: 2px;
+      color: white;
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 14px;
+      max-width: 300px;
+      position: fixed;
+      left: 200px!important;
+      top: -500px;
+      left: -500px;
+      padding: 8px;
+      text-align: center;
+      color: #1ca5b8;
+    }
+    #verification-error{
+        width: 300px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
   }
 
 }

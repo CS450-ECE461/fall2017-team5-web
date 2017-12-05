@@ -1,20 +1,34 @@
+{{#mdl-layout fixedHeader=true}}
+  {{#mdl-layout-header}}
+    {{mdl-toolbar title="Register" navigateUpTo="register.index"}}
+  {{/mdl-layout-header}}
 
-<br><br>
-(Create the account)<br>
+  {{#mdl-layout-content}}
+    {{#if errorMessage}}
+      {{errorMessage}}
+    {{/if}}
+    <img src="/assets/images/sojologo.png" id="sojo-logo">
+    <div id="account-verified">Confirmation number verified.<br>Create your account!</div>
+<br>
 {{mdl-textfield type="email"
                 value=model.email
                 placeholder="Enter your email"
                 required=true
                 autocapitalize="none"
-                label="Email"}}
-<br/>
+                label="Email"
+                id="signup-email"
+}}
 {{mdl-textfield type="password"
                 value=model.password
                 placeholder="Enter your password"
                 required=true
                 autocapitalize="none"
-                label="Password"}}
-<br>
-{{#mdl-button colored=true disabled=isSigningIn click=(action "createAccount")}}
-  Next
+                label="Password"
+                id="signup-password"
+}}
+    <div id="registration-error">{{registrationError}}</div>
+    {{#mdl-button colored=true disabled=isSigningIn click=(action "createAccount") id="create-account-btn"}}
+  Create Account
 {{/mdl-button}}
+{{/mdl-layout-content}}
+{{/mdl-layout}}

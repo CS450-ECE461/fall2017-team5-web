@@ -1,11 +1,28 @@
+{{#mdl-layout fixedHeader=true}}
+  {{#mdl-layout-header}}
+    {{mdl-toolbar title="Register" navigateUpTo="index"}}
+  {{/mdl-layout-header}}
+
+  {{#mdl-layout-content}}
+    {{#if errorMessage}}
+      {{errorMessage}}
+    {{/if}}
 <div class="page-confirmation-number">
-{{mdl-textfield type="text"
+  <img src="assets/images/sojologo.png" id="sojo-logo">
+
+  {{mdl-textfield type="text"
                 value=model.confirmation_code
-                placeholder="Enter your confirmation number"
+                placeholder="XXXXXXXXXX"
                 required=true
                 autocapitalize="none"
-                label="Confirmation Number"}}
-<br>
-{{#mdl-button colored=true click=(action "verifyCode")}}Next{{/mdl-button}}
+                label="Enter Confirmation Number"
+                id="confirmation-field"
+  }}
+
+  <div id="verification-error">{{verificationError}}</div>
+  <br><br><br><br><br>
+{{#mdl-button colored=true click=(action "verifyCode") id="verify-btn"}}Verify{{/mdl-button}}
 {{outlet}}
 </div>
+{{/mdl-layout-content}}
+{{/mdl-layout}}
