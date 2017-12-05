@@ -1,0 +1,9 @@
+{{mdl-textfield type="text"
+                value=model.confirmation_code
+                placeholder="Enter your confirmation number"
+                required=true
+                autocapitalize="none"
+                label="Confirmation Number"}}
+<br>
+{{#mdl-button colored=true click=(action "verifyCode")}}Next{{/mdl-button}}
+{{outlet}}

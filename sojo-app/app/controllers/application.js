@@ -20,5 +20,8 @@ export default Controller.extend({
   }),
   isAccount: Ember.computed('currentRouteName', function () {
     return this.get('currentRouteName').includes('account');
+  }),
+  isRegistration: Ember.computed('currentRouteName', function(){
+    return this.get('currentRouteName').includes('register')
   })
 });

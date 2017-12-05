@@ -1,0 +1,20 @@
+
+<br><br>
+(Create the account)<br>
+{{mdl-textfield type="email"
+                value=model.email
+                placeholder="Enter your email"
+                required=true
+                autocapitalize="none"
+                label="Email"}}
+<br/>
+{{mdl-textfield type="password"
+                value=model.password
+                placeholder="Enter your password"
+                required=true
+                autocapitalize="none"
+                label="Password"}}
+<br>
+{{#mdl-button colored=true disabled=isSigningIn click=(action "createAccount")}}
+  Next
+{{/mdl-button}}

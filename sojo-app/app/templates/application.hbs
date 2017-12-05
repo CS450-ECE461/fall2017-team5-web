@@ -1,4 +1,6 @@
 {{outlet}}
 {{#if isSignedIn}}
-  {{app-nav isHome=isHome isServices=isServices isBillPay=isBillPay isCalendar=isCalendar isAccount=isAccount}}
+  {{#unless isRegistration}}
+    {{app-nav isHome=isHome isServices=isServices isBillPay=isBillPay isCalendar=isCalendar isAccount=isAccount}}
+  {{/unless}}
 {{/if}}
