@@ -1,44 +1,5 @@
-{{#mdl-layout fixedHeader=true}}
-  {{#mdl-layout-header}}
-    {{mdl-toolbar title="User Registration" navigateUpTo="login"}}
-  {{/mdl-layout-header}}
+<div class="mdl-route__register">
 
-  {{#mdl-layout-content}}
-    {{#if errorMessage}}
-      {{errorMessage}}
-    {{/if}}
-    <br><br>
-    <form {{action "createAccount" on="submit"}}>
-      {{mdl-textfield type="email"
-                      value=email
-                      placeholder="Enter your email"
-                      required=true
-                      autocapitalize="none"
-                      label="Email"}}
-      <br/>
-      {{mdl-textfield type="text"
-                      value=username
-                      placeholder="Enter your username"
-                      required=true
-                      autocapitalize="none"
-                      label="Username"}}
-      <br/>
-      {{mdl-textfield type="password"
-                      value=password
-                      placeholder="Enter your password"
-                      required=true
-                      autocapitalize="none"
-                      label="Password"}}
-      <br/><br>
-      <br>
-      <br>
-      {{#mdl-button type="submit"
-                    colored=true
-                    disabled=isSigningIn}}
-        Register
-      {{/mdl-button}}
-    </form>
     {{outlet}}
-  {{/mdl-layout-content}}
-{{/mdl-layout}}
 
+</div>

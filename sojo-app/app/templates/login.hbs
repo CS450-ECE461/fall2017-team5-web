@@ -1,11 +1,11 @@
 <img src="assets/images/sojologo.png" id="sojo-logo">
 <br><br>
 <div class="login-form">
-  {{gatekeeper-sign-in-vertical signInComplete=(action "signInComplete") signInButtonColor="#ed503a"}}
+  {{gatekeeper-sign-in-vertical signInComplete=(action "signInComplete") signInButtonColor="#ed503a" usernamePlaceholder="Email" usernameLabelText="Email"}}
   <br>
   {{#link-to "register"}}{{#mdl-button isRaised=true isAccent=true id="register"}}Register{{/mdl-button}}{{/link-to}}
   <br/><br/>
-  {{#mdl-switch value=rememberMe label="Remember Me"}}
+  {{#mdl-switch value=rememberMe label="Remember Me" checked=true}}
     Remember Me
   {{/mdl-switch}}
   <a class="forgot-password" href="#">Forgot Password</a>
