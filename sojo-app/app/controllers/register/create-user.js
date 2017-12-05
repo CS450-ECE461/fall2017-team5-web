@@ -36,7 +36,7 @@ export default Ember.Controller.extend({
 
         }).done(function(data){
           console.log('got back', data);
-          this.transitionTo('index');
+          this.transitionToRoute('index');
         }.bind(this));
       }).catch(reason => {
         console.log('error: ' + reason);
