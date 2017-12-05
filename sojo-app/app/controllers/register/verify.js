@@ -15,6 +15,12 @@ export default Ember.Controller.extend({
         account_id: this.get('model.currentUser.id')
       });
       event.save();
+    },
+    updateProfile(){
+      this.get('store').findRecord('profile', this.get('model.currentUser.id')).then(function(profile){
+        profile.set('full_name', "Kyle Peeler");
+        profile.save();
+      });
     }
   }
 });

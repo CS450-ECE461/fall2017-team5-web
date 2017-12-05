@@ -32,6 +32,10 @@
 {{#mdl-button color="accent" disabled=isSigningIn id="add-event-btn" click=(action "updateEvents")}}
 Add event (Remove me)
 {{/mdl-button}}
+    <br>
+    {{#mdl-button color="accent" disabled=isSigningIn  click=(action "updateProfile")}}
+      Update Profile
+    {{/mdl-button}}
 
 
   {{/mdl-layout-content}}

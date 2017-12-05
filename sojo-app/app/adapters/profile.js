@@ -13,4 +13,7 @@ export default RESTAdapter.extend({
     let accessToken = this.get('gatekeeper.accessToken.access_token');
     return {Authorization: `Bearer ${accessToken}`};
   }),
+  urlForUpdateRecord(id, modelName, snapshot) {
+    return this.get('host') + '/profiles/' + snapshot.attr('object_id');
+  }
 });
