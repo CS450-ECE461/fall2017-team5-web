@@ -69,14 +69,23 @@ export default Ember.Controller.extend({
       nomonths += end_date.getMonth() + 1;
       var month_difference = nomonths <= 0 ? 0 : nomonths;
       console.log('number of months is', month_difference);
-
+      let event = this.get('store').createRecord('sojo-event', {
+        name: 'Rent Payment Due',
+        date: new Date(2017, 11, 1),
+        start_time: new Date(2017, 11, 1),
+        end_time: new Date(2017, 11, 1),
+        description: "Rent Payment for December",
+        type: "bill",
+        account_id: this.get('gatekeeper.currentUser.id')
+      });
+      event.save();
       for (var i = 0; i < month_difference; i++){
         let event = this.get('store').createRecord('sojo-event', {
           name: 'Rent Payment Due',
-          date: new Date(2017, i, 1),
-          start_time: new Date(2017, i, 1),
-          end_time: new Date(2017, i, 1),
-          description: "Rent Payment for Month " + i,
+          date: new Date(2018, i, 1),
+          start_time: new Date(2018, i, 1),
+          end_time: new Date(2018, i, 1),
+          description: "Rent Payment for Month " + (i+1),
           type: "bill",
           account_id: this.get('gatekeeper.currentUser.id')
         });

@@ -16,13 +16,23 @@ export default Ember.Controller.extend({
         var month_difference = nomonths <= 0 ? 0 : nomonths;
         console.log('number of months is', month_difference);
 
+          let event = this.get('store').createRecord('sojo-event', {
+            name: 'Cable & Electric Payments Due',
+            date: new Date(2017, 11, 16),
+            start_time: new Date(2017, 11, 16),
+            end_time: new Date(2017, 11, 16),
+            description: "Cable and Electric Payments for December ",
+            type: "bill",
+            account_id: this.get('gatekeeper.currentUser.id')
+          });
+          event.save();
         for (var i = 0; i < month_difference; i++){
           let event = this.get('store').createRecord('sojo-event', {
             name: 'Cable & Electric Payments Due',
-            date: new Date(2017, i, 16),
-            start_time: new Date(2017, i, 16),
-            end_time: new Date(2017, i, 16),
-            description: "Cable and Electric Payments for Month " + i,
+            date: new Date(2018, i, 16),
+            start_time: new Date(2018, i, 16),
+            end_time: new Date(2018, i, 16),
+            description: "Cable and Electric Payments for Month " + (i+1),
             type: "bill",
             account_id: this.get('gatekeeper.currentUser.id')
           });

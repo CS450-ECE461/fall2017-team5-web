@@ -38,15 +38,49 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bill-pay.hbs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bill-pay.hbs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/bill-pay.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
+            <state relative-caret-position="759">
               <caret line="33" column="21" lean-forward="false" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
               <folding>
                 <element signature="n#style#0;n#svg#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#svg#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rent.hbs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/bill-pay-setup/rent.hbs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="electric.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/bill-pay-setup/electric.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="496">
+              <caret line="34" column="68" lean-forward="false" selection-start-line="34" selection-start-column="68" selection-end-line="34" selection-end-column="73" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cable.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/bill-pay-setup/cable.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -62,31 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.hbs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/register.hbs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="verify.hbs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/register/verify.hbs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rent.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="rent.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/bill-pay-setup/rent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="54" column="39" lean-forward="false" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
+            <state relative-caret-position="261">
+              <caret line="87" column="56" lean-forward="false" selection-start-line="87" selection-start-column="56" selection-end-line="87" selection-end-column="56" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -170,10 +184,11 @@
         <option value="$PROJECT_DIR$/app/serializers/event.js" />
         <option value="$PROJECT_DIR$/app/helpers/events-for-day.js" />
         <option value="$PROJECT_DIR$/app/templates/index.hbs" />
-        <option value="$PROJECT_DIR$/app/controllers/bill-pay-setup/rent.js" />
         <option value="$PROJECT_DIR$/app/templates/calendar.hbs" />
         <option value="$PROJECT_DIR$/app/styles/app.scss" />
         <option value="$PROJECT_DIR$/app/templates/bill-pay.hbs" />
+        <option value="$PROJECT_DIR$/app/controllers/bill-pay-setup/electric.js" />
+        <option value="$PROJECT_DIR$/app/controllers/bill-pay-setup/rent.js" />
       </list>
     </option>
   </component>
@@ -410,12 +425,12 @@
       <option name="presentableId" value="Default" />
       <updated>1512441053067</updated>
       <workItem from="1512441055988" duration="26174000" />
-      <workItem from="1512575364917" duration="1191000" />
+      <workItem from="1512575364917" duration="1667000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27365000" />
+    <option name="totallyTimeSpent" value="27841000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="679" y="22" width="1186" height="1134" extended-state="0" />
@@ -461,15 +476,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/routes/register/create-account.js" />
-    <entry file="file://$PROJECT_DIR$/app/templates/register/create-account.hbs" />
-    <entry file="file://$PROJECT_DIR$/app/templates/register/choose-method.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="10" lean-forward="true" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -759,16 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/bill-pay-setup/rent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="54" column="39" lean-forward="false" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/calendar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -803,12 +799,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/bill-pay.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
+        <state relative-caret-position="759">
           <caret line="33" column="21" lean-forward="false" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
           <folding>
             <element signature="n#style#0;n#svg#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#svg#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/bill-pay-setup/rent.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/bill-pay-setup/electric.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="34" column="68" lean-forward="false" selection-start-line="34" selection-start-column="68" selection-end-line="34" selection-end-column="73" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/bill-pay-setup/cable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/bill-pay-setup/rent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="87" column="56" lean-forward="false" selection-start-line="87" selection-start-column="56" selection-end-line="87" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
