@@ -722,6 +722,10 @@ a {
   }
 
   .calendar-event-list {
+    .event-description{
+      margin-left: 35px;
+      width: 290px;
+    }
     margin: 40px 40px 0 40px;
     overflow-y: auto;
     height: 200px;
@@ -753,7 +757,6 @@ a {
 
 .payment-dashboard{
   .payment-month{
-    margin-top: 36px;
     text-align: center;
     font-family: Roboto-Bold;
     font-size: 18px;
@@ -853,5 +856,7 @@ a {
         left: 20px;
       }
     }
+
   }
 }
+

@@ -12,6 +12,53 @@ export default Ember.Controller.extend({
   },
   actions: {
     createRentPaymentEvents(){
+      let dummyevent1 = this.get('store').createRecord('sojo-event', {
+        name: 'Package Received',
+        date: new Date(2017, 11, 6),
+        start_time: new Date(2017, 11, 6),
+        end_time: new Date(2017, 11, 6),
+        description: "You have a package to pick up at the main office",
+        type: "event",
+        account_id: this.get('gatekeeper.currentUser.id')
+      });
+      dummyevent1.save();
+      console.log('made dummy event 1', dummyevent1);
+
+      let dummyevent2 = this.get('store').createRecord('sojo-event', {
+        name: 'A/C Service Appointment',
+        date: new Date(2017, 11, 17),
+        start_time: new Date(2017, 11, 17),
+        end_time: new Date(2017, 11, 17),
+        description: "Maintenance will be by to change the air filter",
+        type: "service",
+        account_id: this.get('gatekeeper.currentUser.id')
+      });
+      dummyevent2.save();
+      console.log('made dummy event 2', dummyevent2);
+
+      let dummyevent3 = this.get('store').createRecord('sojo-event', {
+        name: 'A Message From Your Landlord',
+        date: new Date(2017, 11, 8),
+        start_time: new Date(2017, 11, 8),
+        end_time: new Date(2017, 11, 8),
+        description: "Eagle Drive will be closed for renovations. Please follow signs",
+        type: "event",
+        account_id: this.get('gatekeeper.currentUser.id')
+      });
+      dummyevent3.save();
+      console.log('made dummy event 3', dummyevent3);
+
+      let dummyevent4 = this.get('store').createRecord('sojo-event', {
+        name: 'Christmas Social',
+        date: new Date(2017, 11, 1),
+        start_time: new Date(2017, 11, 1),
+        end_time: new Date(2017, 11, 22),
+        description: "Come celebrate holiday cheer with us from 3pm - 6pm in the main office!",
+        type: "event",
+        account_id: this.get('gatekeeper.currentUser.id')
+      });
+      dummyevent4.save();
+      console.log('made dummy event 4', dummyevent4);
 
       var start_date = new Date(this.get('model.lease.start_date'));
       var end_date = new Date(this.get('model.lease.end_date'));
