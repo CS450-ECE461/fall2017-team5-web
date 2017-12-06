@@ -1,0 +1,19 @@
+{{#mdl-layout fixedHeader=true}}
+  {{#mdl-layout-header}}
+    {{mdl-toolbar title="Payment Sent" navigateUpTo="index"}}
+  {{/mdl-layout-header}}
+  <div class="request-sent">
+    <img src="assets/images/sojologo.png" id="sojo-logo">
+
+    <div class="request-sent-text" style="display: block; width: 100%; text-align: center; margin-top: 30px;">Payment Sent</div>
+    <br>
+    {{#link-to 'bill-pay'}}
+      {{#mdl-button colored=true disabled=isSigningIn id="go-back-sent-request"}}
+        Go Back
+      {{/mdl-button}}
+    {{/link-to}}
+  </div>
+
+
+{{/mdl-layout}}
+

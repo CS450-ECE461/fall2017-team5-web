@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SojoApp</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Sojo</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700"
+        type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    {{content-for "head"}}
+  {{content-for "head"}}
 
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/sojo-app.css">
+  <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+  <link integrity="" rel="stylesheet" href="{{rootURL}}assets/sojo-app.css">
 
-    {{content-for "head-footer"}}
-  </head>
-  <body>
-    {{content-for "body"}}
+  {{content-for "head-footer"}}
 
-    <script src="{{rootURL}}assets/vendor.js"></script>
-    <script src="{{rootURL}}assets/sojo-app.js"></script>
+  <script>
+    (function(w,d,s,c,n,a,b){w['PactSafeObject']=n;w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)}, w[n].on=function(){(w[n].e=w[n].e||[]).push(arguments)},w[n].once=function(){(w[n].eo=w[n].eo||[]).push(arguments)},w[n].off=function(){(w[n].o=w[n].o||[]).push(arguments)},w[n].t=1*new Date(); a=d.createElement(s),b=d.getElementsByTagName(s)[0];a.async=1;a.src=c;b.parentNode.insertBefore(a,b) })(window,document,'script','//vault.pactsafe.io/ps.min.js','_ps');
 
-    {{content-for "body-footer"}}
-  </body>
+    _ps('create', '25b2b173-632a-4227-9877-31d2109d8c98');
+  </script>
+</head>
+<body>
+{{content-for "body"}}
+
+<script src="{{rootURL}}assets/vendor.js"></script>
+<script src="{{rootURL}}assets/sojo-app.js"></script>
+
+{{content-for "body-footer"}}
+</body>
 </html>

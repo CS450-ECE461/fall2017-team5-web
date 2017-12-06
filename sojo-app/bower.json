@@ -1,0 +1,13 @@
+{
+  "name": "sojo-app",
+  "dependencies": {
+    "material-design-lite": "^1.3.0",
+    "material-design-icons": "^3.0.1",
+    "mdl-select-component": "https://github.com/MEYVN-digital/mdl-selectfield.git#^0.0.8",
+    "initial.js": "^0.1.0",
+    "jquery-mask-library": "0.0.1"
+  },
+  "resolutions": {
+    "material-design-lite": "^1.3.0"
+  }
+}

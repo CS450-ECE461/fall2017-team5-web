@@ -1,0 +1,26 @@
+{{#mdl-layout fixedHeader=true}}
+  {{dashboard-clock}}
+  {{log isSignedIn}}
+  {{#mdl-tabs rippleEffect=true activeTab=0 }}
+    {{#mdl-tabs-tab-bar colored=true}}
+      {{#mdl-tabs-tab}}Personal{{/mdl-tabs-tab}}
+      {{#mdl-tabs-tab}}Community{{/mdl-tabs-tab}}
+    {{/mdl-tabs-tab-bar}}
+
+    {{#mdl-tabs-panel}}
+      {{dashboard-event month="Dec" day="6" name="Package Received"
+                        description="You have a package to pick up at the main office."}}
+      {{dashboard-event month="Dec" day="17" name="A/C Service Appointment"
+                        description="Maintenance will be by to change air filter."}}
+    {{/mdl-tabs-panel}}
+
+    {{#mdl-tabs-panel}}
+      {{dashboard-event month="Dec" day="4" name="A Message From Your Landlord"
+                        description="Eagle Drive will be closed for renovations. Please follow signs."}}
+      {{dashboard-event month="Dec" day="22" name="Christmas Social"
+                        description="Come celebrate holiday cheer with us from 3pm-6pm in the main office!"}}
+    {{/mdl-tabs-panel}}
+
+  {{/mdl-tabs}}
+{{/mdl-layout}}
+

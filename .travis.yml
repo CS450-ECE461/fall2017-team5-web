@@ -24,11 +24,13 @@ matrix:
 
 before_install:
   - "npm config set spin false"
+  - npm install -g bower    
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost:7357 &
 
 install:
   - cd $(./.ci_helper.sh name)
   - npm install
+  - bower install
 
 script:
   - ember test

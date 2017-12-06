@@ -1,0 +1,42 @@
+{{#mdl-layout fixedHeader=true}}
+  {{#mdl-layout-header}}
+    {{mdl-toolbar title="Register"}}
+  {{/mdl-layout-header}}
+
+  {{#mdl-layout-content}}
+    {{#if errorMessage}}
+      {{errorMessage}}
+    {{/if}}
+    <img src="/assets/images/sojologo.png" id="sojo-logo">
+    <div class="verify-header">
+      Please verify your information
+    </div>
+    <div class="verified-information">
+      <div class="verified-name">
+        Name: {{model.profile.full_name}}
+      </div>
+      <div class="verified-address">
+        Assigned Unit #: {{model.unit.building_index}}{{model.unit.unit_index}}
+      </div>
+      <div class="verified-phone">
+        Phone Number: {{model.profile.phone}}
+      </div>
+    </div>
+    <br>
+    {{#link-to 'bill-pay-setup'}}
+      {{#mdl-button colored=true disabled=isSigningIn id="verify-self-btn"}}
+        Verify
+      {{/mdl-button}}
+    {{/link-to}}
+    <br>
+{{!--#mdl-button color="accent" disabled=isSigningIn id="add-event-btn" click=(action "updateEvents")}}
+Add event (Remove me)
+{{/mdl-button--}}
+    <br>
+    {{!--#mdl-button color="accent" disabled=isSigningIn  click=(action "updateProfile")}}
+      Update Profile
+    {{/mdl-button--}}
+
+
+  {{/mdl-layout-content}}
+{{/mdl-layout}}
