@@ -22,7 +22,13 @@ Router.map(function () {
     this.route('choose-method');
     this.route('create-user');
   });
-  this.route('pay');
+  this.route('bill-pay-setup', function() {
+    this.route('rent');
+    this.route('electric');
+    this.route('cable');
+    this.route('settings');
+    this.route('sign-lease');
+  });
 });
 
 export default Router;

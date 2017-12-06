@@ -1,0 +1,13 @@
+<h1>Rent</h1>
+
+<span>Please verify your monthly rent. If you have any questions please call <a href="tel:1-317-695-4848">317-695-4848</a></span>
+<div class="rent-amount-circle">
+  <div class="rent-amount">
+    ${{model.lease.rent_amount}}
+  </div>
+</div>
+
+
+  {{#mdl-button colored=true disabled=isSigningIn id="bp-setup-rent-btn" click=(action "createRentPaymentEvents")}}
+    Save
+  {{/mdl-button}}

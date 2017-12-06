@@ -455,9 +455,7 @@ a {
       width: 150px;
       font-weight: 300;
       margin-bottom: 8px;
-
     }
-
   }
 }
 
@@ -476,7 +474,6 @@ a {
       width: 100%;
       padding-bottom: 25px;
       text-align: center;
-      text-transform: uppercase;
       font-weight: 300;
       color: white;
       font-size: 20px;
@@ -749,5 +746,98 @@ a {
     font-size: 18px;
     color: #1AA5B8;
     text-transform: uppercase;
+  }
+}
+
+.mdl-route__bill-pay-setup{
+  .sidebar{
+    height: 95vh;
+    width: 121px;
+    position: absolute;
+    left: 0;
+    background-color: rgba(26,165,184,.4);
+    .setup-link{
+      text-align: center;
+      margin-bottom: 100px;
+      /* border-bottom: 2px solid #1aa5b8; */
+      position: relative;
+      right: 0px;
+      margin-top: 20px;
+      a{
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+  .bill-pay-setup-step{
+    .account-settings-tab {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 300px;
+      .settings-header {
+        font-family: Roboto;
+        font-weight: 500;
+        font-size: 16px;
+        color: #1AA5B8;
+        letter-spacing: 0;
+        margin: 12px 16px;
+      }
+      .notification-switch {
+        margin-left: 30px;
+        width: 150px;
+        font-weight: 300;
+        margin-bottom: 8px;
+      }
+    }
+    margin-left: 135px;
+    width: 215px;
+    .company{
+      display: inline-flex;
+      margin-bottom: 15px;
+    }
+    .company-setup > a >button{
+      background-color: #1aa5b8;
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      position: relative;
+      bottom: 5px;
+      color: white;
+      margin-left: 10px;
+    }
+    h1{
+      font-size: 20px;
+      font-weight: bold;
+      color: #1AA5B8;
+    }
+    span{
+      display: block;
+      margin-bottom: 30px;
+    }
+    #bp-setup-index-btn, #bp-setup-cable-btn, #bp-setup-electric-btn, #bp-setup-rent-btn, #bp-setup-settings-btn{
+      width: 130px;
+      float: right;
+      position: relative;
+      left: 10px;
+      margin-top: 20vh;
+    }
+    .rent-amount-circle{
+      width: 115px;
+      height: 115px;
+      background-color: #1AA5B8;
+      color: white;
+      border-radius: 50%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      .rent-amount{
+        font-size: 30px;
+        font-weight: bold;
+        position: relative;
+        top: 45px;
+        left: 20px;
+      }
+    }
   }
 }
