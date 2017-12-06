@@ -29,6 +29,8 @@ Router.map(function () {
     this.route('settings');
     this.route('sign-lease');
   });
+  this.route('payment-confirmed');
+  this.route('request-sent');
 });
 
 export default Router;

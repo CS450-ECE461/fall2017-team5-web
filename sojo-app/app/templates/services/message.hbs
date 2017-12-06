@@ -67,9 +67,10 @@
                    key-down=(action "updateMessageCount")
     }}
     <div class="landlord-message-count message-count">{{messageCount}} / 500</div>
-    {{#mdl-button type="raised" colored=true
+    {{#link-to 'request-sent'}}
+      {{#mdl-button type="raised" colored=true
                   click=(action (mut errorMessage) "Need to implement output")}}Submit{{/mdl-button}}
-
+    {{/link-to}}
   {{/mdl-layout-content}}
 {{/mdl-layout}}
 

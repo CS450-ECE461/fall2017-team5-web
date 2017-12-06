@@ -5,8 +5,5 @@
 
     Setting `disableAnalytics` to true will prevent any data from being sent.
   */
-  "disableAnalytics": false,
-  "ssl": true,
-  "ssl-key": "sojo.key",
-  "ssl-cert": "sojo.crt"
+  "disableAnalytics": false
 }
