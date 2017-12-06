@@ -3,9 +3,25 @@
     {{mdl-toolbar title="Bill Pay" navigateUpTo="index"}}
   {{/mdl-layout-header}}
 
-  {{#mdl-layout-content}}
-    <h3>Bill Pay</h3>
-    {{outlet}}
-  {{/mdl-layout-content}}
+  {{#mdl-tabs rippleEffect=true activeTab=0 }}
+    {{#mdl-tabs-tab-bar colored=true}}
+      {{#mdl-tabs-tab}}Cable{{/mdl-tabs-tab}}
+      {{#mdl-tabs-tab}}Rent{{/mdl-tabs-tab}}
+      {{#mdl-tabs-tab}}Electric{{/mdl-tabs-tab}}
+    {{/mdl-tabs-tab-bar}}
+
+    {{#mdl-tabs-panel}}
+      {{payment-dashboard amount=700}}
+    {{/mdl-tabs-panel}}
+
+    {{#mdl-tabs-panel}}
+      {{payment-dashboard amount=700}}
+    {{/mdl-tabs-panel}}
+
+    {{#mdl-tabs-panel}}
+      {{payment-dashboard amount=700}}
+    {{/mdl-tabs-panel}}
+
+  {{/mdl-tabs}}
 {{/mdl-layout}}
 

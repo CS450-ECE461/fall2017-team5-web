@@ -8,6 +8,6 @@ export default Gatekeeper.User.AuthenticatedRoute.extend({
       profile: this.get('store').findRecord('profile', currentUser.get('id')),
       lease: this.get('store').findRecord('lease', currentUser.get('id')),
       unit: this.get('store').findRecord('unit', currentUser.get('id'))
-    })
-  },
+    });
+  }
 });

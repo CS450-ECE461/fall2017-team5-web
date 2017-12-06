@@ -31,9 +31,10 @@
     </label>
 
 
-
+    {{#link-to 'request-sent'}}
     {{#mdl-button type="raised" colored=true click=(action (mut errorMessage) "Need to implement output")
                   id="request-submit-button"}}Submit{{/mdl-button}}
+    {{/link-to}}
   {{/mdl-layout-content}}
 {{/mdl-layout}}
 
